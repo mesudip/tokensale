@@ -1,0 +1,2565 @@
+{
+  "contractName": "EnumerableSetMock",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "result",
+          "type": "bool"
+        }
+      ],
+      "name": "TransactionResult",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "value",
+          "type": "address"
+        }
+      ],
+      "name": "contains",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "value",
+          "type": "address"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "value",
+          "type": "address"
+        }
+      ],
+      "name": "remove",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "enumerate",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "length",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"result\",\"type\":\"bool\"}],\"name\":\"TransactionResult\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"value\",\"type\":\"address\"}],\"name\":\"add\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"value\",\"type\":\"address\"}],\"name\":\"contains\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"enumerate\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"get\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"length\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"value\",\"type\":\"address\"}],\"name\":\"remove\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/EnumerableSetMock.sol\":\"EnumerableSetMock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/EnumerableSetMock.sol\":{\"keccak256\":\"0xe5f7dfbd14e94c2f88555dc77cce5ccee9d23c0919eb52577c2a9127037464d4\",\"urls\":[\"bzz-raw://4bba1a6a45d301c3724b03cc705d51edc42d564864011a1ed71a17884f09874c\",\"dweb:/ipfs/QmZ5u5pPZTygYEcpmg2bSpF3VwzmFwSoj2zbs1PtG9irYY\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/utils/EnumerableSet.sol\":{\"keccak256\":\"0xcce1d35afae7905e2fd76ff67c3fe866091e223c50133527c302a31ffce9a5d7\",\"urls\":[\"bzz-raw://0fb055ae3a79a6ff6136feeabf8905a535fe90ee273b5099b4405fbeda0dc411\",\"dweb:/ipfs/QmYiqVcFnYuGGX8m7hzASfo7HMPhEqTxSvvGRX1ZipDknF\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506104db806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80630a3b0a4f146100675780631f7b6d321461008f57806329092d0e146100a95780635dbe47e8146100cf5780639507d39a14610109578063ff9f78b314610142575b600080fd5b61008d6004803603602081101561007d57600080fd5b50356001600160a01b031661019a565b005b6100976101e9565b60408051918252519081900360200190f35b61008d600480360360208110156100bf57600080fd5b50356001600160a01b03166101fa565b6100f5600480360360208110156100e557600080fd5b50356001600160a01b031661020c565b604080519115158252519081900360200190f35b6101266004803603602081101561011f57600080fd5b5035610224565b604080516001600160a01b039092168252519081900360200190f35b61014a610236565b60408051602080825283518183015283519192839290830191858101910280838360005b8381101561018657818101518382015260200161016e565b505050509050019250505060405180910390f35b60006101ac818363ffffffff61024216565b60408051821515815290519192507f5f2d66b608a7b4bfa43b7e9ba385022741152c97499b8a8abcd5c27258417b5a919081900360200190a15050565b60006101f560006102a3565b905090565b60006101ac818363ffffffff6102aa16565b600061021e818363ffffffff6103b516565b92915050565b600061021e818363ffffffff6103d316565b60606101f56000610400565b600061024e83836103b5565b61029a5750600182810180548083018083556000928352602080842090920180546001600160a01b0319166001600160a01b03871690811790915583529085905260409091205561021e565b50600092915050565b6001015490565b60006102b683836103b5565b1561029a576001600160a01b038216600090815260208490526040902054600184015460001991820191018082146103615760008560010182815481106102f957fe5b6000918252602090912001546001870180546001600160a01b03909216925082918590811061032457fe5b600091825260208083209190910180546001600160a01b0319166001600160a01b0394851617905592909116815290869052604090206001830190555b6001600160a01b0384166000908152602086905260408120556001850180548061038757fe5b600082815260209020810160001990810180546001600160a01b0319169055019055506001915061021e9050565b6001600160a01b031660009081526020919091526040902054151590565b60008260010182815481106103e457fe5b6000918252602090912001546001600160a01b03169392505050565b6060808260010180549050604051908082528060200260200182016040528015610434578160200160208202803883390190505b50905060005b600184015481101561049f5783600101818154811061045557fe5b9060005260206000200160009054906101000a90046001600160a01b031682828151811061047f57fe5b6001600160a01b039092166020928302919091019091015260010161043a565b509291505056fea265627a7a72315820f2d860fca57c5e93339790e85f5f7777c25b77015fd2f8badf46975abb4c47dc64736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80630a3b0a4f146100675780631f7b6d321461008f57806329092d0e146100a95780635dbe47e8146100cf5780639507d39a14610109578063ff9f78b314610142575b600080fd5b61008d6004803603602081101561007d57600080fd5b50356001600160a01b031661019a565b005b6100976101e9565b60408051918252519081900360200190f35b61008d600480360360208110156100bf57600080fd5b50356001600160a01b03166101fa565b6100f5600480360360208110156100e557600080fd5b50356001600160a01b031661020c565b604080519115158252519081900360200190f35b6101266004803603602081101561011f57600080fd5b5035610224565b604080516001600160a01b039092168252519081900360200190f35b61014a610236565b60408051602080825283518183015283519192839290830191858101910280838360005b8381101561018657818101518382015260200161016e565b505050509050019250505060405180910390f35b60006101ac818363ffffffff61024216565b60408051821515815290519192507f5f2d66b608a7b4bfa43b7e9ba385022741152c97499b8a8abcd5c27258417b5a919081900360200190a15050565b60006101f560006102a3565b905090565b60006101ac818363ffffffff6102aa16565b600061021e818363ffffffff6103b516565b92915050565b600061021e818363ffffffff6103d316565b60606101f56000610400565b600061024e83836103b5565b61029a5750600182810180548083018083556000928352602080842090920180546001600160a01b0319166001600160a01b03871690811790915583529085905260409091205561021e565b50600092915050565b6001015490565b60006102b683836103b5565b1561029a576001600160a01b038216600090815260208490526040902054600184015460001991820191018082146103615760008560010182815481106102f957fe5b6000918252602090912001546001870180546001600160a01b03909216925082918590811061032457fe5b600091825260208083209190910180546001600160a01b0319166001600160a01b0394851617905592909116815290869052604090206001830190555b6001600160a01b0384166000908152602086905260408120556001850180548061038757fe5b600082815260209020810160001990810180546001600160a01b0319169055019055506001915061021e9050565b6001600160a01b031660009081526020919091526040902054151590565b60008260010182815481106103e457fe5b6000918252602090912001546001600160a01b03169392505050565b6060808260010180549050604051908082528060200260200182016040528015610434578160200160208202803883390190505b50905060005b600184015481101561049f5783600101818154811061045557fe5b9060005260206000200160009054906101000a90046001600160a01b031682828151811061047f57fe5b6001600160a01b039092166020928302919091019091015260010161043a565b509291505056fea265627a7a72315820f2d860fca57c5e93339790e85f5f7777c25b77015fd2f8badf46975abb4c47dc64736f6c63430005110032",
+  "sourceMap": "63:833:136:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:833:136;;;;;;;",
+  "deployedSourceMap": "63:833:136:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:833:136;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;345:120;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;345:120:136;-1:-1:-1;;;;;345:120:136;;:::i;:::-;;708:84;;;:::i;:::-;;;;;;;;;;;;;;;;471:126;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;471:126:136;-1:-1:-1;;;;;471:126:136;;:::i;236:103::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;236:103:136;-1:-1:-1;;;;;236:103:136;;:::i;:::-;;;;;;;;;;;;;;;;;;798:96;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;798:96:136;;:::i;:::-;;;;-1:-1:-1;;;;;798:96:136;;;;;;;;;;;;;;603:99;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;603:99:136;;;;;;;;;;;;;;;;;345:120;390:11;404:14;390:11;412:5;404:14;:7;:14;:::i;:::-;433:25;;;;;;;;;;390:28;;-1:-1:-1;433:25:136;;;;;;;;;;345:120;;:::o;708:84::-;747:7;773:12;:3;:10;:12::i;:::-;766:19;;708:84;:::o;471:126::-;519:11;533:17;519:11;544:5;533:17;:10;:17;:::i;236:103::-;290:4;313:19;290:4;326:5;313:19;:12;:19;:::i;:::-;306:26;236:103;-1:-1:-1;;236:103:136:o;798:96::-;847:7;873:14;847:7;881:5;873:14;:7;:14;:::i;603:99::-;645:16;680:15;:3;:13;:15::i;923:272:211:-;1009:4;1034:20;1043:3;1048:5;1034:8;:20::i;:::-;1029:160;;-1:-1:-1;1088:10:211;;;;27::-1;;23:18;;;45:23;;;-1:-1;1088:22:211;;;;;;;;;;;;-1:-1:-1;;;;;;1088:22:211;-1:-1:-1;;;;;1088:22:211;;;;;;;;1069:16;;;;;;;;;;:41;1124:11;;1029:160;-1:-1:-1;1173:5:211;923:272;;;;:::o;3332:141::-;3449:10;;:17;;3332:141::o;1325:1019::-;1414:4;1438:20;1447:3;1452:5;1438:8;:20::i;:::-;1434:904;;;-1:-1:-1;;;;;1497:16:211;;1473:21;1497:16;;;;;;;;;;;1516:1;1551:10;;:17;-1:-1:-1;;1497:20:211;;;;1551:21;1696:26;;;1692:382;;1742:17;1762:3;:10;;1773:9;1762:21;;;;;;;;;;;;;;;;;;;1881:10;;:25;;-1:-1:-1;;;;;1762:21:211;;;;-1:-1:-1;1762:21:211;;1892:13;;1881:25;;;;;;;;;;;;;;;;;;:37;;-1:-1:-1;;;;;;1881:37:211;-1:-1:-1;;;;;1881:37:211;;;;;;1992:20;;;;;;;;;;;;;-1:-1:-1;2015:17:211;;1992:40;;1692:382;-1:-1:-1;;;;;2155:16:211;;:9;:16;;;;;;;;;;2148:23;2242:10;;;:16;;;;;;;;;;;;;;;;-1:-1:-1;;2242:16:211;;;;;-1:-1:-1;;;;;;2242:16:211;;;;;;-1:-1:-1;2242:16:211;;-1:-1:-1;2273:11:211;;-1:-1:-1;2273:11:211;2425:159;-1:-1:-1;;;;;2556:16:211;2529:4;2556:16;;;;;;;;;;;;:21;;;2425:159::o;3795:153::-;3894:7;3924:3;:10;;3935:5;3924:17;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;3924:17:211;;3795:153;-1:-1:-1;;;3795:153:211:o;2937:312::-;3027:16;3059:23;3099:3;:10;;:17;;;;3085:32;;;;;;;;;;;;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;136:17;;-1:-1;3085:32:211;;3059:58;;3132:9;3127:93;3147:10;;;:17;3143:21;;3127:93;;;3196:3;:10;;3207:1;3196:13;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;3196:13:211;3184:6;3191:1;3184:9;;;;;;;;-1:-1:-1;;;;;3184:25:211;;;:9;;;;;;;;;;;:25;3166:3;;3127:93;;;-1:-1:-1;3236:6:211;2937:312;-1:-1:-1;;2937:312:211:o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../utils/EnumerableSet.sol\";\n\ncontract EnumerableSetMock{\n    using EnumerableSet for EnumerableSet.AddressSet;\n\n    event TransactionResult(bool result);\n\n    EnumerableSet.AddressSet private set;\n\n    function contains(address value) public view returns (bool) {\n        return set.contains(value);\n    }\n\n    function add(address value) public {\n        bool result = set.add(value);\n        emit TransactionResult(result);\n    }\n\n    function remove(address value) public {\n        bool result = set.remove(value);\n        emit TransactionResult(result);\n    }\n\n    function enumerate() public view returns (address[] memory) {\n        return set.enumerate();\n    }\n\n    function length() public view returns (uint256) {\n        return set.length();\n    }\n\n    function get(uint256 index) public view returns (address) {\n        return set.get(index);\n    }\n}\n",
+  "sourcePath": "/Users/sudipbhattarai/Documents/erc20-tokensale-gen/solidity-contracts/openzeppelin-contracts-v2.5/mocks/EnumerableSetMock.sol",
+  "ast": {
+    "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/EnumerableSetMock.sol",
+    "exportedSymbols": {
+      "EnumerableSetMock": [
+        9065
+      ]
+    },
+    "id": 9066,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8973,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:136"
+      },
+      {
+        "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/utils/EnumerableSet.sol",
+        "file": "../utils/EnumerableSet.sol",
+        "id": 8974,
+        "nodeType": "ImportDirective",
+        "scope": 9066,
+        "sourceUnit": 15896,
+        "src": "25:36:136",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 9065,
+        "linearizedBaseContracts": [
+          9065
+        ],
+        "name": "EnumerableSetMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 8977,
+            "libraryName": {
+              "contractScope": null,
+              "id": 8975,
+              "name": "EnumerableSet",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 15895,
+              "src": "101:13:136",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EnumerableSet_$15895",
+                "typeString": "library EnumerableSet"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "95:49:136",
+            "typeName": {
+              "contractScope": null,
+              "id": 8976,
+              "name": "EnumerableSet.AddressSet",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 15690,
+              "src": "119:24:136",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_AddressSet_$15690_storage_ptr",
+                "typeString": "struct EnumerableSet.AddressSet"
+              }
+            }
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 8981,
+            "name": "TransactionResult",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 8980,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8979,
+                  "indexed": false,
+                  "name": "result",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8981,
+                  "src": "174:11:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 8978,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "174:4:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "173:13:136"
+            },
+            "src": "150:37:136"
+          },
+          {
+            "constant": false,
+            "id": 8983,
+            "name": "set",
+            "nodeType": "VariableDeclaration",
+            "scope": 9065,
+            "src": "193:36:136",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_AddressSet_$15690_storage",
+              "typeString": "struct EnumerableSet.AddressSet"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 8982,
+              "name": "EnumerableSet.AddressSet",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 15690,
+              "src": "193:24:136",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_AddressSet_$15690_storage_ptr",
+                "typeString": "struct EnumerableSet.AddressSet"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 8995,
+              "nodeType": "Block",
+              "src": "296:43:136",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 8992,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8985,
+                        "src": "326:5:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 8990,
+                        "name": "set",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8983,
+                        "src": "313:3:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AddressSet_$15690_storage",
+                          "typeString": "struct EnumerableSet.AddressSet storage ref"
+                        }
+                      },
+                      "id": 8991,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contains",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15822,
+                      "src": "313:12:136",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_AddressSet_$15690_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_AddressSet_$15690_storage_ptr_$",
+                        "typeString": "function (struct EnumerableSet.AddressSet storage pointer,address) view returns (bool)"
+                      }
+                    },
+                    "id": 8993,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "313:19:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 8989,
+                  "id": 8994,
+                  "nodeType": "Return",
+                  "src": "306:26:136"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 8996,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "contains",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8986,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8985,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8996,
+                  "src": "254:13:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8984,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "254:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "253:15:136"
+            },
+            "returnParameters": {
+              "id": 8989,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8988,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8996,
+                  "src": "290:4:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 8987,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "290:4:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "289:6:136"
+            },
+            "scope": 9065,
+            "src": "236:103:136",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9012,
+              "nodeType": "Block",
+              "src": "380:85:136",
+              "statements": [
+                {
+                  "assignments": [
+                    9002
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 9002,
+                      "name": "result",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 9012,
+                      "src": "390:11:136",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 9001,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "390:4:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 9007,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9005,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8998,
+                        "src": "412:5:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9003,
+                        "name": "set",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8983,
+                        "src": "404:3:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AddressSet_$15690_storage",
+                          "typeString": "struct EnumerableSet.AddressSet storage ref"
+                        }
+                      },
+                      "id": 9004,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15724,
+                      "src": "404:7:136",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_AddressSet_$15690_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_AddressSet_$15690_storage_ptr_$",
+                        "typeString": "function (struct EnumerableSet.AddressSet storage pointer,address) returns (bool)"
+                      }
+                    },
+                    "id": 9006,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "404:14:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "390:28:136"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9009,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9002,
+                        "src": "451:6:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 9008,
+                      "name": "TransactionResult",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 8981,
+                      "src": "433:17:136",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 9010,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "433:25:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9011,
+                  "nodeType": "EmitStatement",
+                  "src": "428:30:136"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9013,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8999,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8998,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9013,
+                  "src": "358:13:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8997,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "357:15:136"
+            },
+            "returnParameters": {
+              "id": 9000,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "380:0:136"
+            },
+            "scope": 9065,
+            "src": "345:120:136",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9029,
+              "nodeType": "Block",
+              "src": "509:88:136",
+              "statements": [
+                {
+                  "assignments": [
+                    9019
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 9019,
+                      "name": "result",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 9029,
+                      "src": "519:11:136",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 9018,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "519:4:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 9024,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9022,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9015,
+                        "src": "544:5:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9020,
+                        "name": "set",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8983,
+                        "src": "533:3:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AddressSet_$15690_storage",
+                          "typeString": "struct EnumerableSet.AddressSet storage ref"
+                        }
+                      },
+                      "id": 9021,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "remove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15805,
+                      "src": "533:10:136",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_AddressSet_$15690_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_AddressSet_$15690_storage_ptr_$",
+                        "typeString": "function (struct EnumerableSet.AddressSet storage pointer,address) returns (bool)"
+                      }
+                    },
+                    "id": 9023,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "533:17:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "519:31:136"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9026,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9019,
+                        "src": "583:6:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 9025,
+                      "name": "TransactionResult",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 8981,
+                      "src": "565:17:136",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 9027,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "565:25:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9028,
+                  "nodeType": "EmitStatement",
+                  "src": "560:30:136"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9030,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9016,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9015,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9030,
+                  "src": "487:13:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9014,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "487:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "486:15:136"
+            },
+            "returnParameters": {
+              "id": 9017,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "509:0:136"
+            },
+            "scope": 9065,
+            "src": "471:126:136",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9040,
+              "nodeType": "Block",
+              "src": "663:39:136",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9036,
+                        "name": "set",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8983,
+                        "src": "680:3:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AddressSet_$15690_storage",
+                          "typeString": "struct EnumerableSet.AddressSet storage ref"
+                        }
+                      },
+                      "id": 9037,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "enumerate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15867,
+                      "src": "680:13:136",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_AddressSet_$15690_storage_ptr_$returns$_t_array$_t_address_$dyn_memory_ptr_$bound_to$_t_struct$_AddressSet_$15690_storage_ptr_$",
+                        "typeString": "function (struct EnumerableSet.AddressSet storage pointer) view returns (address[] memory)"
+                      }
+                    },
+                    "id": 9038,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "680:15:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                      "typeString": "address[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 9035,
+                  "id": 9039,
+                  "nodeType": "Return",
+                  "src": "673:22:136"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9041,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "enumerate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9031,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "621:2:136"
+            },
+            "returnParameters": {
+              "id": 9035,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9034,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9041,
+                  "src": "645:16:136",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9032,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "645:7:136",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 9033,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "645:9:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:18:136"
+            },
+            "scope": 9065,
+            "src": "603:99:136",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9050,
+              "nodeType": "Block",
+              "src": "756:36:136",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9046,
+                        "name": "set",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8983,
+                        "src": "773:3:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AddressSet_$15690_storage",
+                          "typeString": "struct EnumerableSet.AddressSet storage ref"
+                        }
+                      },
+                      "id": 9047,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15879,
+                      "src": "773:10:136",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_AddressSet_$15690_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_AddressSet_$15690_storage_ptr_$",
+                        "typeString": "function (struct EnumerableSet.AddressSet storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 9048,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "773:12:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 9045,
+                  "id": 9049,
+                  "nodeType": "Return",
+                  "src": "766:19:136"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9051,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "length",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9042,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "723:2:136"
+            },
+            "returnParameters": {
+              "id": 9045,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9044,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9051,
+                  "src": "747:7:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9043,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "747:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "746:9:136"
+            },
+            "scope": 9065,
+            "src": "708:84:136",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9063,
+              "nodeType": "Block",
+              "src": "856:38:136",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9060,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9053,
+                        "src": "881:5:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9058,
+                        "name": "set",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8983,
+                        "src": "873:3:136",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AddressSet_$15690_storage",
+                          "typeString": "struct EnumerableSet.AddressSet storage ref"
+                        }
+                      },
+                      "id": 9059,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "get",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15894,
+                      "src": "873:7:136",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_AddressSet_$15690_storage_ptr_$_t_uint256_$returns$_t_address_$bound_to$_t_struct$_AddressSet_$15690_storage_ptr_$",
+                        "typeString": "function (struct EnumerableSet.AddressSet storage pointer,uint256) view returns (address)"
+                      }
+                    },
+                    "id": 9061,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "873:14:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 9057,
+                  "id": 9062,
+                  "nodeType": "Return",
+                  "src": "866:21:136"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9064,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9054,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9053,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9064,
+                  "src": "811:13:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9052,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "811:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "810:15:136"
+            },
+            "returnParameters": {
+              "id": 9057,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9056,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9064,
+                  "src": "847:7:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9055,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "847:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "846:9:136"
+            },
+            "scope": 9065,
+            "src": "798:96:136",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 9066,
+        "src": "63:833:136"
+      }
+    ],
+    "src": "0:897:136"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/EnumerableSetMock.sol",
+      "exportedSymbols": {
+        "EnumerableSetMock": [
+          9065
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 8973,
+        "name": "PragmaDirective",
+        "src": "0:23:136"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 15896,
+          "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/utils/EnumerableSet.sol",
+          "file": "../utils/EnumerableSet.sol",
+          "scope": 9066,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 8974,
+        "name": "ImportDirective",
+        "src": "25:36:136"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            9065
+          ],
+          "name": "EnumerableSetMock",
+          "scope": 9066
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "EnumerableSet",
+                  "referencedDeclaration": 15895,
+                  "type": "library EnumerableSet"
+                },
+                "id": 8975,
+                "name": "UserDefinedTypeName",
+                "src": "101:13:136"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "EnumerableSet.AddressSet",
+                  "referencedDeclaration": 15690,
+                  "type": "struct EnumerableSet.AddressSet"
+                },
+                "id": 8976,
+                "name": "UserDefinedTypeName",
+                "src": "119:24:136"
+              }
+            ],
+            "id": 8977,
+            "name": "UsingForDirective",
+            "src": "95:49:136"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "TransactionResult"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "result",
+                      "scope": 8981,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 8978,
+                        "name": "ElementaryTypeName",
+                        "src": "174:4:136"
+                      }
+                    ],
+                    "id": 8979,
+                    "name": "VariableDeclaration",
+                    "src": "174:11:136"
+                  }
+                ],
+                "id": 8980,
+                "name": "ParameterList",
+                "src": "173:13:136"
+              }
+            ],
+            "id": 8981,
+            "name": "EventDefinition",
+            "src": "150:37:136"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "set",
+              "scope": 9065,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct EnumerableSet.AddressSet",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "EnumerableSet.AddressSet",
+                  "referencedDeclaration": 15690,
+                  "type": "struct EnumerableSet.AddressSet"
+                },
+                "id": 8982,
+                "name": "UserDefinedTypeName",
+                "src": "193:24:136"
+              }
+            ],
+            "id": 8983,
+            "name": "VariableDeclaration",
+            "src": "193:36:136"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "contains",
+              "scope": 9065,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "value",
+                      "scope": 8996,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 8984,
+                        "name": "ElementaryTypeName",
+                        "src": "254:7:136"
+                      }
+                    ],
+                    "id": 8985,
+                    "name": "VariableDeclaration",
+                    "src": "254:13:136"
+                  }
+                ],
+                "id": 8986,
+                "name": "ParameterList",
+                "src": "253:15:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 8996,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 8987,
+                        "name": "ElementaryTypeName",
+                        "src": "290:4:136"
+                      }
+                    ],
+                    "id": 8988,
+                    "name": "VariableDeclaration",
+                    "src": "290:4:136"
+                  }
+                ],
+                "id": 8989,
+                "name": "ParameterList",
+                "src": "289:6:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 8989
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "contains",
+                              "referencedDeclaration": 15822,
+                              "type": "function (struct EnumerableSet.AddressSet storage pointer,address) view returns (bool)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8983,
+                                  "type": "struct EnumerableSet.AddressSet storage ref",
+                                  "value": "set"
+                                },
+                                "id": 8990,
+                                "name": "Identifier",
+                                "src": "313:3:136"
+                              }
+                            ],
+                            "id": 8991,
+                            "name": "MemberAccess",
+                            "src": "313:12:136"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 8985,
+                              "type": "address",
+                              "value": "value"
+                            },
+                            "id": 8992,
+                            "name": "Identifier",
+                            "src": "326:5:136"
+                          }
+                        ],
+                        "id": 8993,
+                        "name": "FunctionCall",
+                        "src": "313:19:136"
+                      }
+                    ],
+                    "id": 8994,
+                    "name": "Return",
+                    "src": "306:26:136"
+                  }
+                ],
+                "id": 8995,
+                "name": "Block",
+                "src": "296:43:136"
+              }
+            ],
+            "id": 8996,
+            "name": "FunctionDefinition",
+            "src": "236:103:136"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "add",
+              "scope": 9065,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "value",
+                      "scope": 9013,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 8997,
+                        "name": "ElementaryTypeName",
+                        "src": "358:7:136"
+                      }
+                    ],
+                    "id": 8998,
+                    "name": "VariableDeclaration",
+                    "src": "358:13:136"
+                  }
+                ],
+                "id": 8999,
+                "name": "ParameterList",
+                "src": "357:15:136"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9000,
+                "name": "ParameterList",
+                "src": "380:0:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        9002
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "result",
+                          "scope": 9012,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "bool",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bool",
+                              "type": "bool"
+                            },
+                            "id": 9001,
+                            "name": "ElementaryTypeName",
+                            "src": "390:4:136"
+                          }
+                        ],
+                        "id": 9002,
+                        "name": "VariableDeclaration",
+                        "src": "390:11:136"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "add",
+                              "referencedDeclaration": 15724,
+                              "type": "function (struct EnumerableSet.AddressSet storage pointer,address) returns (bool)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8983,
+                                  "type": "struct EnumerableSet.AddressSet storage ref",
+                                  "value": "set"
+                                },
+                                "id": 9003,
+                                "name": "Identifier",
+                                "src": "404:3:136"
+                              }
+                            ],
+                            "id": 9004,
+                            "name": "MemberAccess",
+                            "src": "404:7:136"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 8998,
+                              "type": "address",
+                              "value": "value"
+                            },
+                            "id": 9005,
+                            "name": "Identifier",
+                            "src": "412:5:136"
+                          }
+                        ],
+                        "id": 9006,
+                        "name": "FunctionCall",
+                        "src": "404:14:136"
+                      }
+                    ],
+                    "id": 9007,
+                    "name": "VariableDeclarationStatement",
+                    "src": "390:28:136"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 8981,
+                              "type": "function (bool)",
+                              "value": "TransactionResult"
+                            },
+                            "id": 9008,
+                            "name": "Identifier",
+                            "src": "433:17:136"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9002,
+                              "type": "bool",
+                              "value": "result"
+                            },
+                            "id": 9009,
+                            "name": "Identifier",
+                            "src": "451:6:136"
+                          }
+                        ],
+                        "id": 9010,
+                        "name": "FunctionCall",
+                        "src": "433:25:136"
+                      }
+                    ],
+                    "id": 9011,
+                    "name": "EmitStatement",
+                    "src": "428:30:136"
+                  }
+                ],
+                "id": 9012,
+                "name": "Block",
+                "src": "380:85:136"
+              }
+            ],
+            "id": 9013,
+            "name": "FunctionDefinition",
+            "src": "345:120:136"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "remove",
+              "scope": 9065,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "value",
+                      "scope": 9030,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9014,
+                        "name": "ElementaryTypeName",
+                        "src": "487:7:136"
+                      }
+                    ],
+                    "id": 9015,
+                    "name": "VariableDeclaration",
+                    "src": "487:13:136"
+                  }
+                ],
+                "id": 9016,
+                "name": "ParameterList",
+                "src": "486:15:136"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9017,
+                "name": "ParameterList",
+                "src": "509:0:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        9019
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "result",
+                          "scope": 9029,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "bool",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bool",
+                              "type": "bool"
+                            },
+                            "id": 9018,
+                            "name": "ElementaryTypeName",
+                            "src": "519:4:136"
+                          }
+                        ],
+                        "id": 9019,
+                        "name": "VariableDeclaration",
+                        "src": "519:11:136"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "remove",
+                              "referencedDeclaration": 15805,
+                              "type": "function (struct EnumerableSet.AddressSet storage pointer,address) returns (bool)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8983,
+                                  "type": "struct EnumerableSet.AddressSet storage ref",
+                                  "value": "set"
+                                },
+                                "id": 9020,
+                                "name": "Identifier",
+                                "src": "533:3:136"
+                              }
+                            ],
+                            "id": 9021,
+                            "name": "MemberAccess",
+                            "src": "533:10:136"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9015,
+                              "type": "address",
+                              "value": "value"
+                            },
+                            "id": 9022,
+                            "name": "Identifier",
+                            "src": "544:5:136"
+                          }
+                        ],
+                        "id": 9023,
+                        "name": "FunctionCall",
+                        "src": "533:17:136"
+                      }
+                    ],
+                    "id": 9024,
+                    "name": "VariableDeclarationStatement",
+                    "src": "519:31:136"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 8981,
+                              "type": "function (bool)",
+                              "value": "TransactionResult"
+                            },
+                            "id": 9025,
+                            "name": "Identifier",
+                            "src": "565:17:136"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9019,
+                              "type": "bool",
+                              "value": "result"
+                            },
+                            "id": 9026,
+                            "name": "Identifier",
+                            "src": "583:6:136"
+                          }
+                        ],
+                        "id": 9027,
+                        "name": "FunctionCall",
+                        "src": "565:25:136"
+                      }
+                    ],
+                    "id": 9028,
+                    "name": "EmitStatement",
+                    "src": "560:30:136"
+                  }
+                ],
+                "id": 9029,
+                "name": "Block",
+                "src": "509:88:136"
+              }
+            ],
+            "id": 9030,
+            "name": "FunctionDefinition",
+            "src": "471:126:136"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "enumerate",
+              "scope": 9065,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9031,
+                "name": "ParameterList",
+                "src": "621:2:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 9041,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "address[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 9032,
+                            "name": "ElementaryTypeName",
+                            "src": "645:7:136"
+                          }
+                        ],
+                        "id": 9033,
+                        "name": "ArrayTypeName",
+                        "src": "645:9:136"
+                      }
+                    ],
+                    "id": 9034,
+                    "name": "VariableDeclaration",
+                    "src": "645:16:136"
+                  }
+                ],
+                "id": 9035,
+                "name": "ParameterList",
+                "src": "644:18:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 9035
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "address[] memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "enumerate",
+                              "referencedDeclaration": 15867,
+                              "type": "function (struct EnumerableSet.AddressSet storage pointer) view returns (address[] memory)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8983,
+                                  "type": "struct EnumerableSet.AddressSet storage ref",
+                                  "value": "set"
+                                },
+                                "id": 9036,
+                                "name": "Identifier",
+                                "src": "680:3:136"
+                              }
+                            ],
+                            "id": 9037,
+                            "name": "MemberAccess",
+                            "src": "680:13:136"
+                          }
+                        ],
+                        "id": 9038,
+                        "name": "FunctionCall",
+                        "src": "680:15:136"
+                      }
+                    ],
+                    "id": 9039,
+                    "name": "Return",
+                    "src": "673:22:136"
+                  }
+                ],
+                "id": 9040,
+                "name": "Block",
+                "src": "663:39:136"
+              }
+            ],
+            "id": 9041,
+            "name": "FunctionDefinition",
+            "src": "603:99:136"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "length",
+              "scope": 9065,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9042,
+                "name": "ParameterList",
+                "src": "723:2:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 9051,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9043,
+                        "name": "ElementaryTypeName",
+                        "src": "747:7:136"
+                      }
+                    ],
+                    "id": 9044,
+                    "name": "VariableDeclaration",
+                    "src": "747:7:136"
+                  }
+                ],
+                "id": 9045,
+                "name": "ParameterList",
+                "src": "746:9:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 9045
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": 15879,
+                              "type": "function (struct EnumerableSet.AddressSet storage pointer) view returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8983,
+                                  "type": "struct EnumerableSet.AddressSet storage ref",
+                                  "value": "set"
+                                },
+                                "id": 9046,
+                                "name": "Identifier",
+                                "src": "773:3:136"
+                              }
+                            ],
+                            "id": 9047,
+                            "name": "MemberAccess",
+                            "src": "773:10:136"
+                          }
+                        ],
+                        "id": 9048,
+                        "name": "FunctionCall",
+                        "src": "773:12:136"
+                      }
+                    ],
+                    "id": 9049,
+                    "name": "Return",
+                    "src": "766:19:136"
+                  }
+                ],
+                "id": 9050,
+                "name": "Block",
+                "src": "756:36:136"
+              }
+            ],
+            "id": 9051,
+            "name": "FunctionDefinition",
+            "src": "708:84:136"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "get",
+              "scope": 9065,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "index",
+                      "scope": 9064,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9052,
+                        "name": "ElementaryTypeName",
+                        "src": "811:7:136"
+                      }
+                    ],
+                    "id": 9053,
+                    "name": "VariableDeclaration",
+                    "src": "811:13:136"
+                  }
+                ],
+                "id": 9054,
+                "name": "ParameterList",
+                "src": "810:15:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 9064,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9055,
+                        "name": "ElementaryTypeName",
+                        "src": "847:7:136"
+                      }
+                    ],
+                    "id": 9056,
+                    "name": "VariableDeclaration",
+                    "src": "847:7:136"
+                  }
+                ],
+                "id": 9057,
+                "name": "ParameterList",
+                "src": "846:9:136"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 9057
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "address",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "get",
+                              "referencedDeclaration": 15894,
+                              "type": "function (struct EnumerableSet.AddressSet storage pointer,uint256) view returns (address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8983,
+                                  "type": "struct EnumerableSet.AddressSet storage ref",
+                                  "value": "set"
+                                },
+                                "id": 9058,
+                                "name": "Identifier",
+                                "src": "873:3:136"
+                              }
+                            ],
+                            "id": 9059,
+                            "name": "MemberAccess",
+                            "src": "873:7:136"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9053,
+                              "type": "uint256",
+                              "value": "index"
+                            },
+                            "id": 9060,
+                            "name": "Identifier",
+                            "src": "881:5:136"
+                          }
+                        ],
+                        "id": 9061,
+                        "name": "FunctionCall",
+                        "src": "873:14:136"
+                      }
+                    ],
+                    "id": 9062,
+                    "name": "Return",
+                    "src": "866:21:136"
+                  }
+                ],
+                "id": 9063,
+                "name": "Block",
+                "src": "856:38:136"
+              }
+            ],
+            "id": 9064,
+            "name": "FunctionDefinition",
+            "src": "798:96:136"
+          }
+        ],
+        "id": 9065,
+        "name": "ContractDefinition",
+        "src": "63:833:136"
+      }
+    ],
+    "id": 9066,
+    "name": "SourceUnit",
+    "src": "0:897:136"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-06T18:13:26.160Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

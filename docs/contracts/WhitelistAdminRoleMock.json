@@ -1,0 +1,941 @@
+{
+  "contractName": "WhitelistAdminRoleMock",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "WhitelistAdminAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "WhitelistAdminRemoved",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addWhitelistAdmin",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isWhitelistAdmin",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceWhitelistAdmin",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removeWhitelistAdmin",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "onlyWhitelistAdminMock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"WhitelistAdminAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"WhitelistAdminRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addWhitelistAdmin\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isWhitelistAdmin\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"onlyWhitelistAdminMock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removeWhitelistAdmin\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceWhitelistAdmin\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/WhitelistAdminRoleMock.sol\":\"WhitelistAdminRoleMock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/GSN/Context.sol\":{\"keccak256\":\"0x90a3995645af7562d84b9d69363ffa5ae7217714ab61e951bf7bc450f40e4061\",\"urls\":[\"bzz-raw://216ef9d6b614db4eb46970b4e84903f2534a45572dd30a79f0041f1a5830f436\",\"dweb:/ipfs/QmNPrJ4MWKUAWzKXpUqeyKRUfosaoANZAqXgvepdrCwZAG\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/access/Roles.sol\":{\"keccak256\":\"0xb002c378d7b82a101bd659c341518953ca0919d342c0a400196982c0e7e7bcdb\",\"urls\":[\"bzz-raw://00a788c4631466c220b385bdd100c571d24b2deccd657615cfbcef6cadf669a4\",\"dweb:/ipfs/QmTEwDbjJNxmMNCDMqtuou3dyM8Wtp8Q9NFvn7SAVM7Jf3\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/access/roles/WhitelistAdminRole.sol\":{\"keccak256\":\"0x68a31c5d88d371650921f970f37ff38c63dce2a214ac7ab6f455bd857f79e8b4\",\"urls\":[\"bzz-raw://87e7a003bf53ab7242420d1330e9e1be9509d5c0576dfc4641f85ff125f4ef6a\",\"dweb:/ipfs/QmNQo7b8dn9bxdUtSWinF32EnJYurCzAnMjcfRmJwGv5iC\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/WhitelistAdminRoleMock.sol\":{\"keccak256\":\"0xf151699a35e850f16c131accdf8edb55c0dbd59b46d55fd4a22faecf1c583c61\",\"urls\":[\"bzz-raw://c9224cb4bcbe65670f46484df11ac16097c47fa8f5e44de83a0eb548824572f6\",\"dweb:/ipfs/QmNjhrcLRpNjtrNQNhfZrGr1rRjgatGTt543FaYtMSjDvo\"]}},\"version\":1}",
+  "bytecode": "0x60806040526100266100186001600160e01b0361002b16565b6001600160e01b0361002f16565b61016f565b3390565b61004781600061007e60201b6102c81790919060201c565b6040516001600160a01b038216907f22380c05984257a1cb900161c713dd71d39e74820f1aea43bd3f1bdd2096129990600090a250565b61009182826001600160e01b0361010816565b156100e3576040805162461bcd60e51b815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c6500604482015290519081900360640190fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b60006001600160a01b03821661014f5760405162461bcd60e51b81526004018080602001828103825260228152602001806105e66022913960400191505060405180910390fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b6104688061017e6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80634c5a628c1461005c578063564c74a3146100665780636897e9741461006e5780637362d9c814610094578063bb5f747b146100ba575b600080fd5b6100646100f4565b005b610064610106565b6100646004803603602081101561008457600080fd5b50356001600160a01b0316610151565b610064600480360360208110156100aa57600080fd5b50356001600160a01b031661015d565b6100e0600480360360208110156100d057600080fd5b50356001600160a01b03166101ac565b604080519115158252519081900360200190f35b6101046100ff6101c4565b6101c8565b565b6101166101116101c4565b6101ac565b6101045760405162461bcd60e51b81526004018080602001828103825260408152602001806103f46040913960400191505060405180910390fd5b61015a816101c8565b50565b6101686101116101c4565b6101a35760405162461bcd60e51b81526004018080602001828103825260408152602001806103f46040913960400191505060405180910390fd5b61015a816101d1565b60006101be818363ffffffff61021916565b92915050565b3390565b61015a81610280565b6101e260008263ffffffff6102c816565b6040516001600160a01b038216907f22380c05984257a1cb900161c713dd71d39e74820f1aea43bd3f1bdd2096129990600090a250565b60006001600160a01b0382166102605760405162461bcd60e51b81526004018080602001828103825260228152602001806103d26022913960400191505060405180910390fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b61029160008263ffffffff61034916565b6040516001600160a01b038216907f0a8eb35e5ca14b3d6f28e4abf2f128dbab231a58b56e89beb5d636115001e16590600090a250565b6102d28282610219565b15610324576040805162461bcd60e51b815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c6500604482015290519081900360640190fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b6103538282610219565b61038e5760405162461bcd60e51b81526004018080602001828103825260218152602001806103b16021913960400191505060405180910390fd5b6001600160a01b0316600090815260209190915260409020805460ff1916905556fe526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f206164647265737357686974656c69737441646d696e526f6c653a2063616c6c657220646f6573206e6f742068617665207468652057686974656c69737441646d696e20726f6c65a265627a7a72315820aaa1a98e5b7cc23204ba305b2b198974ddc803617fd1fffcdf57f615f966469964736f6c63430005110032526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c80634c5a628c1461005c578063564c74a3146100665780636897e9741461006e5780637362d9c814610094578063bb5f747b146100ba575b600080fd5b6100646100f4565b005b610064610106565b6100646004803603602081101561008457600080fd5b50356001600160a01b0316610151565b610064600480360360208110156100aa57600080fd5b50356001600160a01b031661015d565b6100e0600480360360208110156100d057600080fd5b50356001600160a01b03166101ac565b604080519115158252519081900360200190f35b6101046100ff6101c4565b6101c8565b565b6101166101116101c4565b6101ac565b6101045760405162461bcd60e51b81526004018080602001828103825260408152602001806103f46040913960400191505060405180910390fd5b61015a816101c8565b50565b6101686101116101c4565b6101a35760405162461bcd60e51b81526004018080602001828103825260408152602001806103f46040913960400191505060405180910390fd5b61015a816101d1565b60006101be818363ffffffff61021916565b92915050565b3390565b61015a81610280565b6101e260008263ffffffff6102c816565b6040516001600160a01b038216907f22380c05984257a1cb900161c713dd71d39e74820f1aea43bd3f1bdd2096129990600090a250565b60006001600160a01b0382166102605760405162461bcd60e51b81526004018080602001828103825260228152602001806103d26022913960400191505060405180910390fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b61029160008263ffffffff61034916565b6040516001600160a01b038216907f0a8eb35e5ca14b3d6f28e4abf2f128dbab231a58b56e89beb5d636115001e16590600090a250565b6102d28282610219565b15610324576040805162461bcd60e51b815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c6500604482015290519081900360640190fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b6103538282610219565b61038e5760405162461bcd60e51b81526004018080602001828103825260218152602001806103b16021913960400191505060405180910390fd5b6001600160a01b0316600090815260209190915260409020805460ff1916905556fe526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f206164647265737357686974656c69737441646d696e526f6c653a2063616c6c657220646f6573206e6f742068617665207468652057686974656c69737441646d696e20726f6c65a265627a7a72315820aaa1a98e5b7cc23204ba305b2b198974ddc803617fd1fffcdf57f615f966469964736f6c63430005110032",
+  "sourceMap": "75:495:168:-;;;476:32:68;495:12;-1:-1:-1;;;;;495:10:68;:12;:::i;:::-;-1:-1:-1;;;;;476:18:68;:32;:::i;:::-;75:495:168;;788:96:57;867:10;788:96;:::o;1040:143:68:-;1104:29;1125:7;1104:16;:20;;;;;;:29;;;;:::i;:::-;1148:28;;-1:-1:-1;;;;;1148:28:68;;;;;;;;1040:143;:::o;260:175:63:-;337:18;341:4;347:7;-1:-1:-1;;;;;337:3:63;:18;:::i;:::-;336:19;328:63;;;;;-1:-1:-1;;;328:63:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;401:20:63;:11;:20;;;;;;;;;;;:27;;-1:-1:-1;;401:27:63;424:4;401:27;;;260:175::o;779:200::-;851:4;-1:-1:-1;;;;;875:21:63;;867:68;;;;-1:-1:-1;;;867:68:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;952:20:63;:11;:20;;;;;;;;;;;;;;;779:200::o;75:495:168:-;;;;;;;",
+  "deployedSourceMap": "75:495:168:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;75:495:168;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;941:93:68;;;:::i;:::-;;242:129:168;;;:::i;135:101::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;135:101:168;-1:-1:-1;;;;;135:101:168;;:::i;821:114:68:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;821:114:68;-1:-1:-1;;;;;821:114:68;;:::i;692:123::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;692:123:68;-1:-1:-1;;;;;692:123:68;;:::i;:::-;;;;;;;;;;;;;;;;;;941:93;992:35;1014:12;:10;:12::i;:::-;992:21;:35::i;:::-;941:93::o;242:129:168:-;569:30:68;586:12;:10;:12::i;:::-;569:16;:30::i;:::-;561:107;;;;-1:-1:-1;;;561:107:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;135:101:168;199:30;221:7;199:21;:30::i;:::-;135:101;:::o;821:114:68:-;569:30;586:12;:10;:12::i;569:30::-;561:107;;;;-1:-1:-1;;;561:107:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;901:27;920:7;901:18;:27::i;692:123::-;756:4;779:29;756:4;800:7;779:29;:20;:29;:::i;:::-;772:36;692:123;-1:-1:-1;;692:123:68:o;788:96:57:-;867:10;788:96;:::o;458:110:168:-;525:36;553:7;525:27;:36::i;1040:143:68:-;1104:29;:16;1125:7;1104:29;:20;:29;:::i;:::-;1148:28;;-1:-1:-1;;;;;1148:28:68;;;;;;;;1040:143;:::o;779:200:63:-;851:4;-1:-1:-1;;;;;875:21:63;;867:68;;;;-1:-1:-1;;;867:68:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;952:20:63;:11;:20;;;;;;;;;;;;;;;779:200::o;1189:151:68:-;1256:32;:16;1280:7;1256:32;:23;:32;:::i;:::-;1303:30;;-1:-1:-1;;;;;1303:30:68;;;;;;;;1189:151;:::o;260:175:63:-;337:18;341:4;347:7;337:3;:18::i;:::-;336:19;328:63;;;;;-1:-1:-1;;;328:63:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;401:20:63;:11;:20;;;;;;;;;;;:27;;-1:-1:-1;;401:27:63;424:4;401:27;;;260:175::o;510:180::-;589:18;593:4;599:7;589:3;:18::i;:::-;581:64;;;;-1:-1:-1;;;581:64:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;655:20:63;678:5;655:20;;;;;;;;;;;:28;;-1:-1:-1;;655:28:63;;;510:180::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../access/roles/WhitelistAdminRole.sol\";\n\ncontract WhitelistAdminRoleMock is WhitelistAdminRole {\n    function removeWhitelistAdmin(address account) public {\n        _removeWhitelistAdmin(account);\n    }\n\n    function onlyWhitelistAdminMock() public view onlyWhitelistAdmin {\n        // solhint-disable-previous-line no-empty-blocks\n    }\n\n    // Causes a compilation error if super._removeWhitelistAdmin is not internal\n    function _removeWhitelistAdmin(address account) internal {\n        super._removeWhitelistAdmin(account);\n    }\n}\n",
+  "sourcePath": "/Users/sudipbhattarai/Documents/erc20-tokensale-gen/solidity-contracts/openzeppelin-contracts-v2.5/mocks/WhitelistAdminRoleMock.sol",
+  "ast": {
+    "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/WhitelistAdminRoleMock.sol",
+    "exportedSymbols": {
+      "WhitelistAdminRoleMock": [
+        10643
+      ]
+    },
+    "id": 10644,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10611,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:168"
+      },
+      {
+        "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/access/roles/WhitelistAdminRole.sol",
+        "file": "../access/roles/WhitelistAdminRole.sol",
+        "id": 10612,
+        "nodeType": "ImportDirective",
+        "scope": 10644,
+        "sourceUnit": 3817,
+        "src": "25:48:168",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 10613,
+              "name": "WhitelistAdminRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3816,
+              "src": "110:18:168",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WhitelistAdminRole_$3816",
+                "typeString": "contract WhitelistAdminRole"
+              }
+            },
+            "id": 10614,
+            "nodeType": "InheritanceSpecifier",
+            "src": "110:18:168"
+          }
+        ],
+        "contractDependencies": [
+          2110,
+          3816
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10643,
+        "linearizedBaseContracts": [
+          10643,
+          3816,
+          2110
+        ],
+        "name": "WhitelistAdminRoleMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 10623,
+              "nodeType": "Block",
+              "src": "189:47:168",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10620,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10616,
+                        "src": "221:7:168",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 10619,
+                      "name": "_removeWhitelistAdmin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        10642
+                      ],
+                      "referencedDeclaration": 10642,
+                      "src": "199:21:168",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 10621,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "199:30:168",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10622,
+                  "nodeType": "ExpressionStatement",
+                  "src": "199:30:168"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10624,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeWhitelistAdmin",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10617,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10616,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10624,
+                  "src": "165:15:168",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10615,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "165:7:168",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "164:17:168"
+            },
+            "returnParameters": {
+              "id": 10618,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:168"
+            },
+            "scope": 10643,
+            "src": "135:101:168",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10629,
+              "nodeType": "Block",
+              "src": "307:64:168",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 10630,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 10627,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 10626,
+                  "name": "onlyWhitelistAdmin",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3749,
+                  "src": "288:18:168",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "288:18:168"
+              }
+            ],
+            "name": "onlyWhitelistAdminMock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10625,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "273:2:168"
+            },
+            "returnParameters": {
+              "id": 10628,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "307:0:168"
+            },
+            "scope": 10643,
+            "src": "242:129:168",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10641,
+              "nodeType": "Block",
+              "src": "515:53:168",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10638,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10632,
+                        "src": "553:7:168",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10635,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 16387,
+                        "src": "525:5:168",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_WhitelistAdminRoleMock_$10643",
+                          "typeString": "contract super WhitelistAdminRoleMock"
+                        }
+                      },
+                      "id": 10637,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_removeWhitelistAdmin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3815,
+                      "src": "525:27:168",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 10639,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "525:36:168",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10640,
+                  "nodeType": "ExpressionStatement",
+                  "src": "525:36:168"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10642,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_removeWhitelistAdmin",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10633,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10632,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10642,
+                  "src": "489:15:168",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10631,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "489:7:168",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "488:17:168"
+            },
+            "returnParameters": {
+              "id": 10634,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "515:0:168"
+            },
+            "scope": 10643,
+            "src": "458:110:168",
+            "stateMutability": "nonpayable",
+            "superFunction": 3815,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 10644,
+        "src": "75:495:168"
+      }
+    ],
+    "src": "0:571:168"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/WhitelistAdminRoleMock.sol",
+      "exportedSymbols": {
+        "WhitelistAdminRoleMock": [
+          10643
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 10611,
+        "name": "PragmaDirective",
+        "src": "0:23:168"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 3817,
+          "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/access/roles/WhitelistAdminRole.sol",
+          "file": "../access/roles/WhitelistAdminRole.sol",
+          "scope": 10644,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 10612,
+        "name": "ImportDirective",
+        "src": "25:48:168"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            2110,
+            3816
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            10643,
+            3816,
+            2110
+          ],
+          "name": "WhitelistAdminRoleMock",
+          "scope": 10644
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "WhitelistAdminRole",
+                  "referencedDeclaration": 3816,
+                  "type": "contract WhitelistAdminRole"
+                },
+                "id": 10613,
+                "name": "UserDefinedTypeName",
+                "src": "110:18:168"
+              }
+            ],
+            "id": 10614,
+            "name": "InheritanceSpecifier",
+            "src": "110:18:168"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "removeWhitelistAdmin",
+              "scope": 10643,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "account",
+                      "scope": 10624,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 10615,
+                        "name": "ElementaryTypeName",
+                        "src": "165:7:168"
+                      }
+                    ],
+                    "id": 10616,
+                    "name": "VariableDeclaration",
+                    "src": "165:15:168"
+                  }
+                ],
+                "id": 10617,
+                "name": "ParameterList",
+                "src": "164:17:168"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10618,
+                "name": "ParameterList",
+                "src": "189:0:168"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                10642
+                              ],
+                              "referencedDeclaration": 10642,
+                              "type": "function (address)",
+                              "value": "_removeWhitelistAdmin"
+                            },
+                            "id": 10619,
+                            "name": "Identifier",
+                            "src": "199:21:168"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10616,
+                              "type": "address",
+                              "value": "account"
+                            },
+                            "id": 10620,
+                            "name": "Identifier",
+                            "src": "221:7:168"
+                          }
+                        ],
+                        "id": 10621,
+                        "name": "FunctionCall",
+                        "src": "199:30:168"
+                      }
+                    ],
+                    "id": 10622,
+                    "name": "ExpressionStatement",
+                    "src": "199:30:168"
+                  }
+                ],
+                "id": 10623,
+                "name": "Block",
+                "src": "189:47:168"
+              }
+            ],
+            "id": 10624,
+            "name": "FunctionDefinition",
+            "src": "135:101:168"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "onlyWhitelistAdminMock",
+              "scope": 10643,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10625,
+                "name": "ParameterList",
+                "src": "273:2:168"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10628,
+                "name": "ParameterList",
+                "src": "307:0:168"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 3749,
+                      "type": "modifier ()",
+                      "value": "onlyWhitelistAdmin"
+                    },
+                    "id": 10626,
+                    "name": "Identifier",
+                    "src": "288:18:168"
+                  }
+                ],
+                "id": 10627,
+                "name": "ModifierInvocation",
+                "src": "288:18:168"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10629,
+                "name": "Block",
+                "src": "307:64:168"
+              }
+            ],
+            "id": 10630,
+            "name": "FunctionDefinition",
+            "src": "242:129:168"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_removeWhitelistAdmin",
+              "scope": 10643,
+              "stateMutability": "nonpayable",
+              "superFunction": 3815,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "account",
+                      "scope": 10642,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 10631,
+                        "name": "ElementaryTypeName",
+                        "src": "489:7:168"
+                      }
+                    ],
+                    "id": 10632,
+                    "name": "VariableDeclaration",
+                    "src": "489:15:168"
+                  }
+                ],
+                "id": 10633,
+                "name": "ParameterList",
+                "src": "488:17:168"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10634,
+                "name": "ParameterList",
+                "src": "515:0:168"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "_removeWhitelistAdmin",
+                              "referencedDeclaration": 3815,
+                              "type": "function (address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 16387,
+                                  "type": "contract super WhitelistAdminRoleMock",
+                                  "value": "super"
+                                },
+                                "id": 10635,
+                                "name": "Identifier",
+                                "src": "525:5:168"
+                              }
+                            ],
+                            "id": 10637,
+                            "name": "MemberAccess",
+                            "src": "525:27:168"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10632,
+                              "type": "address",
+                              "value": "account"
+                            },
+                            "id": 10638,
+                            "name": "Identifier",
+                            "src": "553:7:168"
+                          }
+                        ],
+                        "id": 10639,
+                        "name": "FunctionCall",
+                        "src": "525:36:168"
+                      }
+                    ],
+                    "id": 10640,
+                    "name": "ExpressionStatement",
+                    "src": "525:36:168"
+                  }
+                ],
+                "id": 10641,
+                "name": "Block",
+                "src": "515:53:168"
+              }
+            ],
+            "id": 10642,
+            "name": "FunctionDefinition",
+            "src": "458:110:168"
+          }
+        ],
+        "id": 10643,
+        "name": "ContractDefinition",
+        "src": "75:495:168"
+      }
+    ],
+    "id": 10644,
+    "name": "SourceUnit",
+    "src": "0:571:168"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-06T18:13:26.185Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,874 @@
+{
+  "contractName": "ERC20Metadata",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "tokenURI_",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"tokenURI_\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"See https://eips.ethereum.org/EIPS/eip-1046{tokenURI} must respond with a URI that implements https://eips.ethereum.org/EIPS/eip-1047\",\"methods\":{},\"title\":\"ERC-1047 Token Metadata\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/drafts/ERC1046/ERC20Metadata.sol\":\"ERC20Metadata\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/drafts/ERC1046/ERC20Metadata.sol\":{\"keccak256\":\"0x42dc484a5d3369f160ef361eaef7c415657d7720d20dd4ebbac3dda94291619e\",\"urls\":[\"bzz-raw://888c8623c784bfd1ce447971ae0769271d20be2188c9f68ae278f85b764f7b2a\",\"dweb:/ipfs/QmbAAyZ4ZfkRc9BAF2UBtSkB35npgVc13Kpp9XezuJgL89\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xe5bb0f57cff3e299f360052ba50f1ea0fff046df2be070b6943e0e3c3fdad8a9\",\"urls\":[\"bzz-raw://59fd025151435da35faa8093a5c7a17de02de9d08ad27275c5cdf05050820d91\",\"dweb:/ipfs/QmQMvwEcPhoRXzbXyrdoeRtvLoifUW9Qh7Luho7bmUPRkc\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516103313803806103318339818101604052602081101561003357600080fd5b810190808051604051939291908464010000000082111561005357600080fd5b90830190602082018581111561006857600080fd5b825164010000000081118282018810171561008257600080fd5b82525081516020918201929091019080838360005b838110156100af578181015183820152602001610097565b50505050905090810190601f1680156100dc5780820380516001836020036101000a031916815260200191505b506040525050506100f2816100f860201b60201c565b506101aa565b805161010b90600090602084019061010f565b5050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061015057805160ff191683800117855561017d565b8280016001018555821561017d579182015b8281111561017d578251825591602001919060010190610162565b5061018992915061018d565b5090565b6101a791905b808211156101895760008155600101610193565b90565b610178806101b96000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80633c130d9014610030575b600080fd5b6100386100ad565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561007257818101518382015260200161005a565b50505050905090810190601f16801561009f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054604080516020601f60026000196101006001881615020190951694909404938401819004810282018101909252828152606093909290918301828280156101395780601f1061010e57610100808354040283529160200191610139565b820191906000526020600020905b81548152906001019060200180831161011c57829003601f168201915b505050505090509056fea265627a7a723158200fde1747cc09b946ef0c9f832aec56cd97425e03854c812119de5d004451fa3264736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80633c130d9014610030575b600080fd5b6100386100ad565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561007257818101518382015260200161005a565b50505050905090810190601f16801561009f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054604080516020601f60026000196101006001881615020190951694909404938401819004810282018101909252828152606093909290918301828280156101395780601f1061010e57610100808354040283529160200191610139565b820191906000526020600020905b81548152906001019060200180831161011c57829003601f168201915b505050505090509056fea265627a7a723158200fde1747cc09b946ef0c9f832aec56cd97425e03854c812119de5d004451fa3264736f6c63430005110032",
+  "sourceMap": "258:344:88:-;;;318:85;8:9:-1;5:2;;;30:1;27;20:12;5:2;318:85:88;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;318:85:88;;;;;;;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;62:21;;;;123:4;114:14;;138:31;;;135:2;;;182:1;179;172:12;135:2;213:10;;261:11;244:29;;285:43;;;282:58;-1:-1;233:115;230:2;;;361:1;358;351:12;230:2;372:25;;-1:-1;318:85:88;;420:4:-1;411:14;;;;318:85:88;;;;;411:14:-1;318:85:88;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;318:85:88;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;373:23;386:9;373:12;;;:23;;:::i;:::-;318:85;258:344;;506:94;572:21;;;;:9;;:21;;;;;:::i;:::-;;506:94;:::o;258:344::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;258:344:88;;;-1:-1:-1;258:344:88;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "258:344:88:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;258:344:88;;;;;;;;;;;;;;;;;;;409:91;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;409:91:88;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;484:9;477:16;;;;;;;;-1:-1:-1;;477:16:88;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;452:13;;477:16;;484:9;;477:16;;484:9;477:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;409:91;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../../token/ERC20/IERC20.sol\";\n\n/**\n * @title ERC-1047 Token Metadata\n * @dev See https://eips.ethereum.org/EIPS/eip-1046\n * @dev {tokenURI} must respond with a URI that implements https://eips.ethereum.org/EIPS/eip-1047\n */\ncontract ERC20Metadata {\n    string private _tokenURI;\n\n    constructor (string memory tokenURI_) public {\n        _setTokenURI(tokenURI_);\n    }\n\n    function tokenURI() external view returns (string memory) {\n        return _tokenURI;\n    }\n\n    function _setTokenURI(string memory tokenURI_) internal {\n        _tokenURI = tokenURI_;\n    }\n}\n",
+  "sourcePath": "/Users/sudipbhattarai/Documents/erc20-tokensale-gen/solidity-contracts/openzeppelin-contracts-v2.5/drafts/ERC1046/ERC20Metadata.sol",
+  "ast": {
+    "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/drafts/ERC1046/ERC20Metadata.sol",
+    "exportedSymbols": {
+      "ERC20Metadata": [
+        5444
+      ]
+    },
+    "id": 5445,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5412,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:88"
+      },
+      {
+        "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/token/ERC20/IERC20.sol",
+        "file": "../../token/ERC20/IERC20.sol",
+        "id": 5413,
+        "nodeType": "ImportDirective",
+        "scope": 5445,
+        "sourceUnit": 12318,
+        "src": "25:38:88",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title ERC-1047 Token Metadata\n@dev See https://eips.ethereum.org/EIPS/eip-1046\n@dev {tokenURI} must respond with a URI that implements https://eips.ethereum.org/EIPS/eip-1047",
+        "fullyImplemented": true,
+        "id": 5444,
+        "linearizedBaseContracts": [
+          5444
+        ],
+        "name": "ERC20Metadata",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5415,
+            "name": "_tokenURI",
+            "nodeType": "VariableDeclaration",
+            "scope": 5444,
+            "src": "287:24:88",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 5414,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "287:6:88",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 5424,
+              "nodeType": "Block",
+              "src": "363:40:88",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5421,
+                        "name": "tokenURI_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5417,
+                        "src": "386:9:88",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 5420,
+                      "name": "_setTokenURI",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5443,
+                      "src": "373:12:88",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 5422,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "373:23:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5423,
+                  "nodeType": "ExpressionStatement",
+                  "src": "373:23:88"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5425,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5418,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5417,
+                  "name": "tokenURI_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5425,
+                  "src": "331:23:88",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 5416,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "331:6:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "330:25:88"
+            },
+            "returnParameters": {
+              "id": 5419,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "363:0:88"
+            },
+            "scope": 5444,
+            "src": "318:85:88",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5432,
+              "nodeType": "Block",
+              "src": "467:33:88",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5430,
+                    "name": "_tokenURI",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5415,
+                    "src": "484:9:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 5429,
+                  "id": 5431,
+                  "nodeType": "Return",
+                  "src": "477:16:88"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5433,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenURI",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5426,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "426:2:88"
+            },
+            "returnParameters": {
+              "id": 5429,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5428,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5433,
+                  "src": "452:13:88",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 5427,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "452:6:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "451:15:88"
+            },
+            "scope": 5444,
+            "src": "409:91:88",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 5442,
+              "nodeType": "Block",
+              "src": "562:38:88",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 5440,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 5438,
+                      "name": "_tokenURI",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5415,
+                      "src": "572:9:88",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 5439,
+                      "name": "tokenURI_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5435,
+                      "src": "584:9:88",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "572:21:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 5441,
+                  "nodeType": "ExpressionStatement",
+                  "src": "572:21:88"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5443,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setTokenURI",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5436,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5435,
+                  "name": "tokenURI_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5443,
+                  "src": "528:23:88",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 5434,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "528:6:88",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "527:25:88"
+            },
+            "returnParameters": {
+              "id": 5437,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "562:0:88"
+            },
+            "scope": 5444,
+            "src": "506:94:88",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 5445,
+        "src": "258:344:88"
+      }
+    ],
+    "src": "0:603:88"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/drafts/ERC1046/ERC20Metadata.sol",
+      "exportedSymbols": {
+        "ERC20Metadata": [
+          5444
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 5412,
+        "name": "PragmaDirective",
+        "src": "0:23:88"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 12318,
+          "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/token/ERC20/IERC20.sol",
+          "file": "../../token/ERC20/IERC20.sol",
+          "scope": 5445,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 5413,
+        "name": "ImportDirective",
+        "src": "25:38:88"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "@title ERC-1047 Token Metadata\n@dev See https://eips.ethereum.org/EIPS/eip-1046\n@dev {tokenURI} must respond with a URI that implements https://eips.ethereum.org/EIPS/eip-1047",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            5444
+          ],
+          "name": "ERC20Metadata",
+          "scope": 5445
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "_tokenURI",
+              "scope": 5444,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string"
+                },
+                "id": 5414,
+                "name": "ElementaryTypeName",
+                "src": "287:6:88"
+              }
+            ],
+            "id": 5415,
+            "name": "VariableDeclaration",
+            "src": "287:24:88"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 5444,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "tokenURI_",
+                      "scope": 5425,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 5416,
+                        "name": "ElementaryTypeName",
+                        "src": "331:6:88"
+                      }
+                    ],
+                    "id": 5417,
+                    "name": "VariableDeclaration",
+                    "src": "331:23:88"
+                  }
+                ],
+                "id": 5418,
+                "name": "ParameterList",
+                "src": "330:25:88"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5419,
+                "name": "ParameterList",
+                "src": "363:0:88"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5443,
+                              "type": "function (string memory)",
+                              "value": "_setTokenURI"
+                            },
+                            "id": 5420,
+                            "name": "Identifier",
+                            "src": "373:12:88"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5417,
+                              "type": "string memory",
+                              "value": "tokenURI_"
+                            },
+                            "id": 5421,
+                            "name": "Identifier",
+                            "src": "386:9:88"
+                          }
+                        ],
+                        "id": 5422,
+                        "name": "FunctionCall",
+                        "src": "373:23:88"
+                      }
+                    ],
+                    "id": 5423,
+                    "name": "ExpressionStatement",
+                    "src": "373:23:88"
+                  }
+                ],
+                "id": 5424,
+                "name": "Block",
+                "src": "363:40:88"
+              }
+            ],
+            "id": 5425,
+            "name": "FunctionDefinition",
+            "src": "318:85:88"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "tokenURI",
+              "scope": 5444,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5426,
+                "name": "ParameterList",
+                "src": "426:2:88"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 5433,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 5427,
+                        "name": "ElementaryTypeName",
+                        "src": "452:6:88"
+                      }
+                    ],
+                    "id": 5428,
+                    "name": "VariableDeclaration",
+                    "src": "452:13:88"
+                  }
+                ],
+                "id": 5429,
+                "name": "ParameterList",
+                "src": "451:15:88"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 5429
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 5415,
+                          "type": "string storage ref",
+                          "value": "_tokenURI"
+                        },
+                        "id": 5430,
+                        "name": "Identifier",
+                        "src": "484:9:88"
+                      }
+                    ],
+                    "id": 5431,
+                    "name": "Return",
+                    "src": "477:16:88"
+                  }
+                ],
+                "id": 5432,
+                "name": "Block",
+                "src": "467:33:88"
+              }
+            ],
+            "id": 5433,
+            "name": "FunctionDefinition",
+            "src": "409:91:88"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_setTokenURI",
+              "scope": 5444,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "tokenURI_",
+                      "scope": 5443,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 5434,
+                        "name": "ElementaryTypeName",
+                        "src": "528:6:88"
+                      }
+                    ],
+                    "id": 5435,
+                    "name": "VariableDeclaration",
+                    "src": "528:23:88"
+                  }
+                ],
+                "id": 5436,
+                "name": "ParameterList",
+                "src": "527:25:88"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5437,
+                "name": "ParameterList",
+                "src": "562:0:88"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5415,
+                              "type": "string storage ref",
+                              "value": "_tokenURI"
+                            },
+                            "id": 5438,
+                            "name": "Identifier",
+                            "src": "572:9:88"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5435,
+                              "type": "string memory",
+                              "value": "tokenURI_"
+                            },
+                            "id": 5439,
+                            "name": "Identifier",
+                            "src": "584:9:88"
+                          }
+                        ],
+                        "id": 5440,
+                        "name": "Assignment",
+                        "src": "572:21:88"
+                      }
+                    ],
+                    "id": 5441,
+                    "name": "ExpressionStatement",
+                    "src": "572:21:88"
+                  }
+                ],
+                "id": 5442,
+                "name": "Block",
+                "src": "562:38:88"
+              }
+            ],
+            "id": 5443,
+            "name": "FunctionDefinition",
+            "src": "506:94:88"
+          }
+        ],
+        "id": 5444,
+        "name": "ContractDefinition",
+        "src": "258:344:88"
+      }
+    ],
+    "id": 5445,
+    "name": "SourceUnit",
+    "src": "0:603:88"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-06T18:13:26.109Z",
+  "devdoc": {
+    "details": "See https://eips.ethereum.org/EIPS/eip-1046{tokenURI} must respond with a URI that implements https://eips.ethereum.org/EIPS/eip-1047",
+    "methods": {},
+    "title": "ERC-1047 Token Metadata"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

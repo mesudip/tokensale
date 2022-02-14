@@ -1,0 +1,35 @@
+{
+  "56": {
+    "code": "BSC",
+    "symbol": "BNB",
+    "name": "Binance Smart Chain"
+  },
+  "97": {
+    "code": "tBSC",
+    "symbol": "tBNB",
+    "name": "Binance Smart Chain (TestNet)",
+    "contracts": {
+      "TokenRegistry": "0xF7aA3311bB457Eb65243ED1728D68B27ccc3eB60",
+      "TokenSaleRegistry": "0xA9835eB7BC135D60F832Ba07E9275a2e788e9916",
+      "PancakeFactory": "0x6725F303b657a9451d8BA641348b6761A6CC7a17",
+      "PancakeRouter": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1"
+    }
+  },
+  "1337": {
+    "code": "tETH",
+    "symbol": "tETH",
+    "name": "Ganache TestChain",
+    "contracts": {
+      "TokenRegistry": "0x0cc74d3Cc77af0Fb44A3336dD38a90733E2fE704",
+      "TokenSaleRegistry": "0x1af3D6ab7afb1b2FC12f1Dd99A0BC518dEDE07B7"
+    }
+  },
+  "1": {
+    "code": "ETH",
+    "name": "Ethereum"
+  },
+  "4": {
+    "code": "rETH",
+    "name": "Rinkeby TestNet"
+  }
+}

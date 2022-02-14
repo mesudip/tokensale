@@ -1,0 +1,941 @@
+{
+  "contractName": "SignerRoleMock",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "SignerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "SignerRemoved",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addSigner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isSigner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceSigner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removeSigner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "onlySignerMock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"SignerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"SignerRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addSigner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isSigner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"onlySignerMock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removeSigner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceSigner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SignerRoleMock.sol\":\"SignerRoleMock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/GSN/Context.sol\":{\"keccak256\":\"0x90a3995645af7562d84b9d69363ffa5ae7217714ab61e951bf7bc450f40e4061\",\"urls\":[\"bzz-raw://216ef9d6b614db4eb46970b4e84903f2534a45572dd30a79f0041f1a5830f436\",\"dweb:/ipfs/QmNPrJ4MWKUAWzKXpUqeyKRUfosaoANZAqXgvepdrCwZAG\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/access/Roles.sol\":{\"keccak256\":\"0xb002c378d7b82a101bd659c341518953ca0919d342c0a400196982c0e7e7bcdb\",\"urls\":[\"bzz-raw://00a788c4631466c220b385bdd100c571d24b2deccd657615cfbcef6cadf669a4\",\"dweb:/ipfs/QmTEwDbjJNxmMNCDMqtuou3dyM8Wtp8Q9NFvn7SAVM7Jf3\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/access/roles/SignerRole.sol\":{\"keccak256\":\"0x8252a9c9aa6908ce8c7df868e2609e9994b78179d2daf0781d8315117479210e\",\"urls\":[\"bzz-raw://170cf6c10bac24a7352f5198fdace32447f54189a3b29a32e9b9802d697fad66\",\"dweb:/ipfs/QmRi9CuNP1q13uGXQWMgYFT88CPisUyKh42cNmymhUFjgs\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SignerRoleMock.sol\":{\"keccak256\":\"0xc7e1014810da7b2be9960b5c82fc2a4c817a63fc429a32fe199796aa84bd641f\",\"urls\":[\"bzz-raw://ec4b5b5cb64971ac742b73ce68ecc3aff4bda4f6d66e47207dcce41627dccb79\",\"dweb:/ipfs/QmUSviwsVLUXvxqAfFXrwQgdE6X7iNJY174HGRrjxiCgvx\"]}},\"version\":1}",
+  "bytecode": "0x60806040526100266100186001600160e01b0361002b16565b6001600160e01b0361002f16565b61016f565b3390565b61004781600061007e60201b6102c81790919060201c565b6040516001600160a01b038216907f47d1c22a25bb3a5d4e481b9b1e6944c2eade3181a0a20b495ed61d35b5323f2490600090a250565b61009182826001600160e01b0361010816565b156100e3576040805162461bcd60e51b815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c6500604482015290519081900360640190fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b60006001600160a01b03821661014f5760405162461bcd60e51b81526004018080602001828103825260228152602001806105d66022913960400191505060405180910390fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b6104588061017e6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80630e316ab71461005c5780637df73e2714610084578063b44e2ab9146100be578063e5c8b03d146100c6578063eb12d61e146100ce575b600080fd5b6100826004803603602081101561007257600080fd5b50356001600160a01b03166100f4565b005b6100aa6004803603602081101561009a57600080fd5b50356001600160a01b0316610100565b604080519115158252519081900360200190f35b610082610118565b610082610165565b610082600480360360208110156100e457600080fd5b50356001600160a01b0316610175565b6100fd816101c4565b50565b6000610112818363ffffffff6101cd16565b92915050565b610128610123610234565b610100565b6101635760405162461bcd60e51b81526004018080602001828103825260308152602001806103f46030913960400191505060405180910390fd5b565b610163610170610234565b6101c4565b610180610123610234565b6101bb5760405162461bcd60e51b81526004018080602001828103825260308152602001806103f46030913960400191505060405180910390fd5b6100fd81610238565b6100fd81610280565b60006001600160a01b0382166102145760405162461bcd60e51b81526004018080602001828103825260228152602001806103d26022913960400191505060405180910390fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b3390565b61024960008263ffffffff6102c816565b6040516001600160a01b038216907f47d1c22a25bb3a5d4e481b9b1e6944c2eade3181a0a20b495ed61d35b5323f2490600090a250565b61029160008263ffffffff61034916565b6040516001600160a01b038216907f3525e22824a8a7df2c9a6029941c824cf95b6447f1e13d5128fd3826d35afe8b90600090a250565b6102d282826101cd565b15610324576040805162461bcd60e51b815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c6500604482015290519081900360640190fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b61035382826101cd565b61038e5760405162461bcd60e51b81526004018080602001828103825260218152602001806103b16021913960400191505060405180910390fd5b6001600160a01b0316600090815260209190915260409020805460ff1916905556fe526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f20616464726573735369676e6572526f6c653a2063616c6c657220646f6573206e6f74206861766520746865205369676e657220726f6c65a265627a7a72315820cb36fd517a8a816ffeaebc6fee6d731c30d8a80a22e1a5cfca36f0cdf9611c5864736f6c63430005110032526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c80630e316ab71461005c5780637df73e2714610084578063b44e2ab9146100be578063e5c8b03d146100c6578063eb12d61e146100ce575b600080fd5b6100826004803603602081101561007257600080fd5b50356001600160a01b03166100f4565b005b6100aa6004803603602081101561009a57600080fd5b50356001600160a01b0316610100565b604080519115158252519081900360200190f35b610082610118565b610082610165565b610082600480360360208110156100e457600080fd5b50356001600160a01b0316610175565b6100fd816101c4565b50565b6000610112818363ffffffff6101cd16565b92915050565b610128610123610234565b610100565b6101635760405162461bcd60e51b81526004018080602001828103825260308152602001806103f46030913960400191505060405180910390fd5b565b610163610170610234565b6101c4565b610180610123610234565b6101bb5760405162461bcd60e51b81526004018080602001828103825260308152602001806103f46030913960400191505060405180910390fd5b6100fd81610238565b6100fd81610280565b60006001600160a01b0382166102145760405162461bcd60e51b81526004018080602001828103825260228152602001806103d26022913960400191505060405180910390fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b3390565b61024960008263ffffffff6102c816565b6040516001600160a01b038216907f47d1c22a25bb3a5d4e481b9b1e6944c2eade3181a0a20b495ed61d35b5323f2490600090a250565b61029160008263ffffffff61034916565b6040516001600160a01b038216907f3525e22824a8a7df2c9a6029941c824cf95b6447f1e13d5128fd3826d35afe8b90600090a250565b6102d282826101cd565b15610324576040805162461bcd60e51b815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c6500604482015290519081900360640190fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b61035382826101cd565b61038e5760405162461bcd60e51b81526004018080602001828103825260218152602001806103b16021913960400191505060405180910390fd5b6001600160a01b0316600090815260209190915260409020805460ff1916905556fe526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f20616464726573735369676e6572526f6c653a2063616c6c657220646f6573206e6f74206861766520746865205369676e657220726f6c65a265627a7a72315820cb36fd517a8a816ffeaebc6fee6d731c30d8a80a22e1a5cfca36f0cdf9611c5864736f6c63430005110032",
+  "sourceMap": "67:423:165:-;;;318:24:67;329:12;-1:-1:-1;;;;;329:10:67;:12;:::i;:::-;-1:-1:-1;;;;;318:10:67;:24;:::i;:::-;67:423:165;;788:96:57;867:10;788:96;:::o;786:119:67:-;842:21;855:7;842:8;:12;;;;;;:21;;;;:::i;:::-;878:20;;-1:-1:-1;;;;;878:20:67;;;;;;;;786:119;:::o;260:175:63:-;337:18;341:4;347:7;-1:-1:-1;;;;;337:3:63;:18;:::i;:::-;336:19;328:63;;;;;-1:-1:-1;;;328:63:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;401:20:63;:11;:20;;;;;;;;;;;:27;;-1:-1:-1;;401:27:63;424:4;401:27;;;260:175::o;779:200::-;851:4;-1:-1:-1;;;;;875:21:63;;867:68;;;;-1:-1:-1;;;867:68:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;952:20:63;:11;:20;;;;;;;;;;;;;;;779:200::o;67:423:165:-;;;;;;;",
+  "deployedSourceMap": "67:423:165:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;67:423:165;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;111:85;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;111:85:165;-1:-1:-1;;;;;111:85:165;;:::i;:::-;;494:107:67;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;494:107:67;-1:-1:-1;;;;;494:107:67;;:::i;:::-;;;;;;;;;;;;;;;;;;202:113:165;;;:::i;703:77:67:-;;;:::i;607:90::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;607:90:67;-1:-1:-1;;;;;607:90:67;;:::i;111:85:165:-;167:22;181:7;167:13;:22::i;:::-;111:85;:::o;494:107:67:-;550:4;573:21;550:4;586:7;573:21;:12;:21;:::i;:::-;566:28;494:107;-1:-1:-1;;494:107:67:o;202:113:165:-;395:22:67;404:12;:10;:12::i;:::-;395:8;:22::i;:::-;387:83;;;;-1:-1:-1;;;387:83:67;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;202:113:165:o;703:77:67:-;746:27;760:12;:10;:12::i;:::-;746:13;:27::i;607:90::-;395:22;404:12;:10;:12::i;395:22::-;387:83;;;;-1:-1:-1;;;387:83:67;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;671:19;682:7;671:10;:19::i;394:94:165:-;453:28;473:7;453:19;:28::i;779:200:63:-;851:4;-1:-1:-1;;;;;875:21:63;;867:68;;;;-1:-1:-1;;;867:68:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;952:20:63;:11;:20;;;;;;;;;;;;;;;779:200::o;788:96:57:-;867:10;788:96;:::o;786:119:67:-;842:21;:8;855:7;842:21;:12;:21;:::i;:::-;878:20;;-1:-1:-1;;;;;878:20:67;;;;;;;;786:119;:::o;911:127::-;970:24;:8;986:7;970:24;:15;:24;:::i;:::-;1009:22;;-1:-1:-1;;;;;1009:22:67;;;;;;;;911:127;:::o;260:175:63:-;337:18;341:4;347:7;337:3;:18::i;:::-;336:19;328:63;;;;;-1:-1:-1;;;328:63:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;401:20:63;:11;:20;;;;;;;;;;;:27;;-1:-1:-1;;401:27:63;424:4;401:27;;;260:175::o;510:180::-;589:18;593:4;599:7;589:3;:18::i;:::-;581:64;;;;-1:-1:-1;;;581:64:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;655:20:63;678:5;655:20;;;;;;;;;;;:28;;-1:-1:-1;;655:28:63;;;510:180::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../access/roles/SignerRole.sol\";\n\ncontract SignerRoleMock is SignerRole {\n    function removeSigner(address account) public {\n        _removeSigner(account);\n    }\n\n    function onlySignerMock() public view onlySigner {\n        // solhint-disable-previous-line no-empty-blocks\n    }\n\n    // Causes a compilation error if super._removeSigner is not internal\n    function _removeSigner(address account) internal {\n        super._removeSigner(account);\n    }\n}\n",
+  "sourcePath": "/Users/sudipbhattarai/Documents/erc20-tokensale-gen/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SignerRoleMock.sol",
+  "ast": {
+    "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SignerRoleMock.sol",
+    "exportedSymbols": {
+      "SignerRoleMock": [
+        10552
+      ]
+    },
+    "id": 10553,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10520,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:165"
+      },
+      {
+        "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/access/roles/SignerRole.sol",
+        "file": "../access/roles/SignerRole.sol",
+        "id": 10521,
+        "nodeType": "ImportDirective",
+        "scope": 10553,
+        "sourceUnit": 3710,
+        "src": "25:40:165",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 10522,
+              "name": "SignerRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3709,
+              "src": "94:10:165",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SignerRole_$3709",
+                "typeString": "contract SignerRole"
+              }
+            },
+            "id": 10523,
+            "nodeType": "InheritanceSpecifier",
+            "src": "94:10:165"
+          }
+        ],
+        "contractDependencies": [
+          2110,
+          3709
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10552,
+        "linearizedBaseContracts": [
+          10552,
+          3709,
+          2110
+        ],
+        "name": "SignerRoleMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 10532,
+              "nodeType": "Block",
+              "src": "157:39:165",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10529,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10525,
+                        "src": "181:7:165",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 10528,
+                      "name": "_removeSigner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        10551
+                      ],
+                      "referencedDeclaration": 10551,
+                      "src": "167:13:165",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 10530,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "167:22:165",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10531,
+                  "nodeType": "ExpressionStatement",
+                  "src": "167:22:165"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10533,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeSigner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10526,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10525,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10533,
+                  "src": "133:15:165",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10524,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:7:165",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "132:17:165"
+            },
+            "returnParameters": {
+              "id": 10527,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "157:0:165"
+            },
+            "scope": 10552,
+            "src": "111:85:165",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10538,
+              "nodeType": "Block",
+              "src": "251:64:165",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 10539,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 10536,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 10535,
+                  "name": "onlySigner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3642,
+                  "src": "240:10:165",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "240:10:165"
+              }
+            ],
+            "name": "onlySignerMock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10534,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:2:165"
+            },
+            "returnParameters": {
+              "id": 10537,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "251:0:165"
+            },
+            "scope": 10552,
+            "src": "202:113:165",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10550,
+              "nodeType": "Block",
+              "src": "443:45:165",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10547,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10541,
+                        "src": "473:7:165",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10544,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 16381,
+                        "src": "453:5:165",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_SignerRoleMock_$10552",
+                          "typeString": "contract super SignerRoleMock"
+                        }
+                      },
+                      "id": 10546,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_removeSigner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3708,
+                      "src": "453:19:165",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 10548,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "453:28:165",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10549,
+                  "nodeType": "ExpressionStatement",
+                  "src": "453:28:165"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10551,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_removeSigner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10542,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10541,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10551,
+                  "src": "417:15:165",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10540,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "417:7:165",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "416:17:165"
+            },
+            "returnParameters": {
+              "id": 10543,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "443:0:165"
+            },
+            "scope": 10552,
+            "src": "394:94:165",
+            "stateMutability": "nonpayable",
+            "superFunction": 3708,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 10553,
+        "src": "67:423:165"
+      }
+    ],
+    "src": "0:491:165"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SignerRoleMock.sol",
+      "exportedSymbols": {
+        "SignerRoleMock": [
+          10552
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 10520,
+        "name": "PragmaDirective",
+        "src": "0:23:165"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 3710,
+          "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/access/roles/SignerRole.sol",
+          "file": "../access/roles/SignerRole.sol",
+          "scope": 10553,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 10521,
+        "name": "ImportDirective",
+        "src": "25:40:165"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            2110,
+            3709
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            10552,
+            3709,
+            2110
+          ],
+          "name": "SignerRoleMock",
+          "scope": 10553
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "SignerRole",
+                  "referencedDeclaration": 3709,
+                  "type": "contract SignerRole"
+                },
+                "id": 10522,
+                "name": "UserDefinedTypeName",
+                "src": "94:10:165"
+              }
+            ],
+            "id": 10523,
+            "name": "InheritanceSpecifier",
+            "src": "94:10:165"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "removeSigner",
+              "scope": 10552,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "account",
+                      "scope": 10533,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 10524,
+                        "name": "ElementaryTypeName",
+                        "src": "133:7:165"
+                      }
+                    ],
+                    "id": 10525,
+                    "name": "VariableDeclaration",
+                    "src": "133:15:165"
+                  }
+                ],
+                "id": 10526,
+                "name": "ParameterList",
+                "src": "132:17:165"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10527,
+                "name": "ParameterList",
+                "src": "157:0:165"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                10551
+                              ],
+                              "referencedDeclaration": 10551,
+                              "type": "function (address)",
+                              "value": "_removeSigner"
+                            },
+                            "id": 10528,
+                            "name": "Identifier",
+                            "src": "167:13:165"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10525,
+                              "type": "address",
+                              "value": "account"
+                            },
+                            "id": 10529,
+                            "name": "Identifier",
+                            "src": "181:7:165"
+                          }
+                        ],
+                        "id": 10530,
+                        "name": "FunctionCall",
+                        "src": "167:22:165"
+                      }
+                    ],
+                    "id": 10531,
+                    "name": "ExpressionStatement",
+                    "src": "167:22:165"
+                  }
+                ],
+                "id": 10532,
+                "name": "Block",
+                "src": "157:39:165"
+              }
+            ],
+            "id": 10533,
+            "name": "FunctionDefinition",
+            "src": "111:85:165"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "onlySignerMock",
+              "scope": 10552,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10534,
+                "name": "ParameterList",
+                "src": "225:2:165"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10537,
+                "name": "ParameterList",
+                "src": "251:0:165"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 3642,
+                      "type": "modifier ()",
+                      "value": "onlySigner"
+                    },
+                    "id": 10535,
+                    "name": "Identifier",
+                    "src": "240:10:165"
+                  }
+                ],
+                "id": 10536,
+                "name": "ModifierInvocation",
+                "src": "240:10:165"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10538,
+                "name": "Block",
+                "src": "251:64:165"
+              }
+            ],
+            "id": 10539,
+            "name": "FunctionDefinition",
+            "src": "202:113:165"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_removeSigner",
+              "scope": 10552,
+              "stateMutability": "nonpayable",
+              "superFunction": 3708,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "account",
+                      "scope": 10551,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 10540,
+                        "name": "ElementaryTypeName",
+                        "src": "417:7:165"
+                      }
+                    ],
+                    "id": 10541,
+                    "name": "VariableDeclaration",
+                    "src": "417:15:165"
+                  }
+                ],
+                "id": 10542,
+                "name": "ParameterList",
+                "src": "416:17:165"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10543,
+                "name": "ParameterList",
+                "src": "443:0:165"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "_removeSigner",
+                              "referencedDeclaration": 3708,
+                              "type": "function (address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 16381,
+                                  "type": "contract super SignerRoleMock",
+                                  "value": "super"
+                                },
+                                "id": 10544,
+                                "name": "Identifier",
+                                "src": "453:5:165"
+                              }
+                            ],
+                            "id": 10546,
+                            "name": "MemberAccess",
+                            "src": "453:19:165"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10541,
+                              "type": "address",
+                              "value": "account"
+                            },
+                            "id": 10547,
+                            "name": "Identifier",
+                            "src": "473:7:165"
+                          }
+                        ],
+                        "id": 10548,
+                        "name": "FunctionCall",
+                        "src": "453:28:165"
+                      }
+                    ],
+                    "id": 10549,
+                    "name": "ExpressionStatement",
+                    "src": "453:28:165"
+                  }
+                ],
+                "id": 10550,
+                "name": "Block",
+                "src": "443:45:165"
+              }
+            ],
+            "id": 10551,
+            "name": "FunctionDefinition",
+            "src": "394:94:165"
+          }
+        ],
+        "id": 10552,
+        "name": "ContractDefinition",
+        "src": "67:423:165"
+      }
+    ],
+    "id": 10553,
+    "name": "SourceUnit",
+    "src": "0:491:165"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-06T18:13:26.184Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

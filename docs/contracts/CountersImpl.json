@@ -1,0 +1,934 @@
+{
+  "contractName": "CountersImpl",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "current",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "decrement",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"current\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"decrement\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"increment\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/CountersImpl.sol\":\"CountersImpl\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/drafts/Counters.sol\":{\"keccak256\":\"0x5be8533c5950173dc2b77b75108fae6e6c5449aedadde3385ba457394aad2384\",\"urls\":[\"bzz-raw://d429fb04f5b31d909dc759d0f88e28055b80b4dd43e5def4dffc947fa0609229\",\"dweb:/ipfs/QmaY9idX5CwLLtjjTQAdiiaDSrncgafkatUZXTbbajpz8b\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f\",\"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/CountersImpl.sol\":{\"keccak256\":\"0x986bd9401d960d2f0016079bf5051613f9c9b72eebe8a523957d9a08052bf197\",\"urls\":[\"bzz-raw://1b32b2022ec1aeee273bd72047c25e5d78458b632f56ca1e204f82f30a2a2fac\",\"dweb:/ipfs/QmSvrF7CEmpVJPHCZxLiVRNnZ4scTRjGHysoqBSGMmRCha\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101d2806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80632baeceb7146100465780639fa6a6e314610050578063d09de08a1461006a575b600080fd5b61004e610072565b005b61005861007e565b60408051918252519081900360200190f35b61004e61008f565b61007c6000610099565b565b600061008a60006100b0565b905090565b61007c60006100b4565b80546100ac90600163ffffffff6100bd16565b9055565b5490565b80546001019055565b60006100ff83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f770000815250610106565b9392505050565b600081848411156101955760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561015a578181015183820152602001610142565b50505050905090810190601f1680156101875780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50505090039056fea265627a7a7231582004acc316be18fb34e98bb6e3861c257ff1750d7d587935d9f8ef1c663d33212b64736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80632baeceb7146100465780639fa6a6e314610050578063d09de08a1461006a575b600080fd5b61004e610072565b005b61005861007e565b60408051918252519081900360200190f35b61004e61008f565b61007c6000610099565b565b600061008a60006100b0565b905090565b61007c60006100b4565b80546100ac90600163ffffffff6100bd16565b9055565b5490565b80546001019055565b60006100ff83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f770000815250610106565b9392505050565b600081848411156101955760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561015a578181015183820152602001610142565b50505050905090810190601f1680156101875780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50505090039056fea265627a7a7231582004acc316be18fb34e98bb6e3861c257ff1750d7d587935d9f8ef1c663d33212b64736f6c63430005110032",
+  "sourceMap": "59:345:112:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:345:112;;;;;;;",
+  "deployedSourceMap": "59:345:112:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:345:112;;;;;;;;;;;;;;;;;;;;;;;;;;;;;337:65;;;:::i;:::-;;169:91;;;:::i;:::-;;;;;;;;;;;;;;;;266:65;;;:::i;337:::-;375:20;:8;:18;:20::i;:::-;337:65::o;169:91::-;209:7;235:18;:8;:16;:18::i;:::-;228:25;;169:91;:::o;266:65::-;304:20;:8;:18;:20::i;1367:108:87:-;1447:14;;:21;;1466:1;1447:21;:18;:21;:::i;:::-;1430:38;;1367:108::o;1065:112::-;1156:14;;1065:112::o;1183:178::-;1335:19;;1353:1;1335:19;;;1183:178::o;1274:134:104:-;1332:7;1358:43;1362:1;1365;1358:43;;;;;;;;;;;;;;;;;:3;:43::i;:::-;1351:50;1274:134;-1:-1:-1;;;1274:134:104:o;1732:187::-;1818:7;1853:12;1845:6;;;;1837:29;;;;-1:-1:-1;;;1837:29:104;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1837:29:104;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1888:5:104;;;1732:187::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../drafts/Counters.sol\";\n\ncontract CountersImpl {\n    using Counters for Counters.Counter;\n\n    Counters.Counter private _counter;\n\n    function current() public view returns (uint256) {\n        return _counter.current();\n    }\n\n    function increment() public {\n        _counter.increment();\n    }\n\n    function decrement() public {\n        _counter.decrement();\n    }\n}\n",
+  "sourcePath": "/Users/sudipbhattarai/Documents/erc20-tokensale-gen/solidity-contracts/openzeppelin-contracts-v2.5/mocks/CountersImpl.sol",
+  "ast": {
+    "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/CountersImpl.sol",
+    "exportedSymbols": {
+      "CountersImpl": [
+        7708
+      ]
+    },
+    "id": 7709,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7673,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:112"
+      },
+      {
+        "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/drafts/Counters.sol",
+        "file": "../drafts/Counters.sol",
+        "id": 7674,
+        "nodeType": "ImportDirective",
+        "scope": 7709,
+        "sourceUnit": 5411,
+        "src": "25:32:112",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7708,
+        "linearizedBaseContracts": [
+          7708
+        ],
+        "name": "CountersImpl",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 7677,
+            "libraryName": {
+              "contractScope": null,
+              "id": 7675,
+              "name": "Counters",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5410,
+              "src": "93:8:112",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Counters_$5410",
+                "typeString": "library Counters"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "87:36:112",
+            "typeName": {
+              "contractScope": null,
+              "id": 7676,
+              "name": "Counters.Counter",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5370,
+              "src": "106:16:112",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$5370_storage_ptr",
+                "typeString": "struct Counters.Counter"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 7679,
+            "name": "_counter",
+            "nodeType": "VariableDeclaration",
+            "scope": 7708,
+            "src": "129:33:112",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Counter_$5370_storage",
+              "typeString": "struct Counters.Counter"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 7678,
+              "name": "Counters.Counter",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5370,
+              "src": "129:16:112",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$5370_storage_ptr",
+                "typeString": "struct Counters.Counter"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 7688,
+              "nodeType": "Block",
+              "src": "218:42:112",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7684,
+                        "name": "_counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7679,
+                        "src": "235:8:112",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$5370_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 7685,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "current",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5381,
+                      "src": "235:16:112",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$5370_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$5370_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 7686,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "235:18:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 7683,
+                  "id": 7687,
+                  "nodeType": "Return",
+                  "src": "228:25:112"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7689,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "current",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7680,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "185:2:112"
+            },
+            "returnParameters": {
+              "id": 7683,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7682,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7689,
+                  "src": "209:7:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7681,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "209:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "208:9:112"
+            },
+            "scope": 7708,
+            "src": "169:91:112",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7697,
+              "nodeType": "Block",
+              "src": "294:37:112",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7692,
+                        "name": "_counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7679,
+                        "src": "304:8:112",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$5370_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 7694,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "increment",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5393,
+                      "src": "304:18:112",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$5370_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$5370_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer)"
+                      }
+                    },
+                    "id": 7695,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "304:20:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7696,
+                  "nodeType": "ExpressionStatement",
+                  "src": "304:20:112"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7698,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increment",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7690,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "284:2:112"
+            },
+            "returnParameters": {
+              "id": 7691,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "294:0:112"
+            },
+            "scope": 7708,
+            "src": "266:65:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7706,
+              "nodeType": "Block",
+              "src": "365:37:112",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7701,
+                        "name": "_counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7679,
+                        "src": "375:8:112",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$5370_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 7703,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "decrement",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5409,
+                      "src": "375:18:112",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$5370_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$5370_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer)"
+                      }
+                    },
+                    "id": 7704,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "375:20:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7705,
+                  "nodeType": "ExpressionStatement",
+                  "src": "375:20:112"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7707,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decrement",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7699,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "355:2:112"
+            },
+            "returnParameters": {
+              "id": 7700,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "365:0:112"
+            },
+            "scope": 7708,
+            "src": "337:65:112",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7709,
+        "src": "59:345:112"
+      }
+    ],
+    "src": "0:405:112"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/CountersImpl.sol",
+      "exportedSymbols": {
+        "CountersImpl": [
+          7708
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 7673,
+        "name": "PragmaDirective",
+        "src": "0:23:112"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 5411,
+          "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/drafts/Counters.sol",
+          "file": "../drafts/Counters.sol",
+          "scope": 7709,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 7674,
+        "name": "ImportDirective",
+        "src": "25:32:112"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7708
+          ],
+          "name": "CountersImpl",
+          "scope": 7709
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Counters",
+                  "referencedDeclaration": 5410,
+                  "type": "library Counters"
+                },
+                "id": 7675,
+                "name": "UserDefinedTypeName",
+                "src": "93:8:112"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Counters.Counter",
+                  "referencedDeclaration": 5370,
+                  "type": "struct Counters.Counter"
+                },
+                "id": 7676,
+                "name": "UserDefinedTypeName",
+                "src": "106:16:112"
+              }
+            ],
+            "id": 7677,
+            "name": "UsingForDirective",
+            "src": "87:36:112"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "_counter",
+              "scope": 7708,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct Counters.Counter",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Counters.Counter",
+                  "referencedDeclaration": 5370,
+                  "type": "struct Counters.Counter"
+                },
+                "id": 7678,
+                "name": "UserDefinedTypeName",
+                "src": "129:16:112"
+              }
+            ],
+            "id": 7679,
+            "name": "VariableDeclaration",
+            "src": "129:33:112"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "current",
+              "scope": 7708,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7680,
+                "name": "ParameterList",
+                "src": "185:2:112"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 7689,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7681,
+                        "name": "ElementaryTypeName",
+                        "src": "209:7:112"
+                      }
+                    ],
+                    "id": 7682,
+                    "name": "VariableDeclaration",
+                    "src": "209:7:112"
+                  }
+                ],
+                "id": 7683,
+                "name": "ParameterList",
+                "src": "208:9:112"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 7683
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "current",
+                              "referencedDeclaration": 5381,
+                              "type": "function (struct Counters.Counter storage pointer) view returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7679,
+                                  "type": "struct Counters.Counter storage ref",
+                                  "value": "_counter"
+                                },
+                                "id": 7684,
+                                "name": "Identifier",
+                                "src": "235:8:112"
+                              }
+                            ],
+                            "id": 7685,
+                            "name": "MemberAccess",
+                            "src": "235:16:112"
+                          }
+                        ],
+                        "id": 7686,
+                        "name": "FunctionCall",
+                        "src": "235:18:112"
+                      }
+                    ],
+                    "id": 7687,
+                    "name": "Return",
+                    "src": "228:25:112"
+                  }
+                ],
+                "id": 7688,
+                "name": "Block",
+                "src": "218:42:112"
+              }
+            ],
+            "id": 7689,
+            "name": "FunctionDefinition",
+            "src": "169:91:112"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "increment",
+              "scope": 7708,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7690,
+                "name": "ParameterList",
+                "src": "284:2:112"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7691,
+                "name": "ParameterList",
+                "src": "294:0:112"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "increment",
+                              "referencedDeclaration": 5393,
+                              "type": "function (struct Counters.Counter storage pointer)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7679,
+                                  "type": "struct Counters.Counter storage ref",
+                                  "value": "_counter"
+                                },
+                                "id": 7692,
+                                "name": "Identifier",
+                                "src": "304:8:112"
+                              }
+                            ],
+                            "id": 7694,
+                            "name": "MemberAccess",
+                            "src": "304:18:112"
+                          }
+                        ],
+                        "id": 7695,
+                        "name": "FunctionCall",
+                        "src": "304:20:112"
+                      }
+                    ],
+                    "id": 7696,
+                    "name": "ExpressionStatement",
+                    "src": "304:20:112"
+                  }
+                ],
+                "id": 7697,
+                "name": "Block",
+                "src": "294:37:112"
+              }
+            ],
+            "id": 7698,
+            "name": "FunctionDefinition",
+            "src": "266:65:112"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "decrement",
+              "scope": 7708,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7699,
+                "name": "ParameterList",
+                "src": "355:2:112"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7700,
+                "name": "ParameterList",
+                "src": "365:0:112"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "decrement",
+                              "referencedDeclaration": 5409,
+                              "type": "function (struct Counters.Counter storage pointer)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7679,
+                                  "type": "struct Counters.Counter storage ref",
+                                  "value": "_counter"
+                                },
+                                "id": 7701,
+                                "name": "Identifier",
+                                "src": "375:8:112"
+                              }
+                            ],
+                            "id": 7703,
+                            "name": "MemberAccess",
+                            "src": "375:18:112"
+                          }
+                        ],
+                        "id": 7704,
+                        "name": "FunctionCall",
+                        "src": "375:20:112"
+                      }
+                    ],
+                    "id": 7705,
+                    "name": "ExpressionStatement",
+                    "src": "375:20:112"
+                  }
+                ],
+                "id": 7706,
+                "name": "Block",
+                "src": "365:37:112"
+              }
+            ],
+            "id": 7707,
+            "name": "FunctionDefinition",
+            "src": "337:65:112"
+          }
+        ],
+        "id": 7708,
+        "name": "ContractDefinition",
+        "src": "59:345:112"
+      }
+    ],
+    "id": 7709,
+    "name": "SourceUnit",
+    "src": "0:405:112"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-06T18:13:26.143Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

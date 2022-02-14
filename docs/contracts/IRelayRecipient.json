@@ -1,0 +1,1471 @@
+{
+  "contractName": "IRelayRecipient",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getHubAddr",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "relay",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "encodedFunction",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "transactionFee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "gasPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "gasLimit",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "nonce",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "approvalData",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxPossibleCharge",
+          "type": "uint256"
+        }
+      ],
+      "name": "acceptRelayedCall",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "context",
+          "type": "bytes"
+        }
+      ],
+      "name": "preRelayedCall",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "context",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "actualCharge",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "preRetVal",
+          "type": "bytes32"
+        }
+      ],
+      "name": "postRelayedCall",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"relay\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"encodedFunction\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"transactionFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"gasPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"gasLimit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"approvalData\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"maxPossibleCharge\",\"type\":\"uint256\"}],\"name\":\"acceptRelayedCall\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getHubAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"context\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"actualCharge\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"preRetVal\",\"type\":\"bytes32\"}],\"name\":\"postRelayedCall\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"context\",\"type\":\"bytes\"}],\"name\":\"preRelayedCall\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Base interface for a contract that will be called via the GSN from {IRelayHub}. * TIP: You don't need to write an implementation yourself! Inherit from {GSNRecipient} instead.\",\"methods\":{\"acceptRelayedCall(address,address,bytes,uint256,uint256,uint256,uint256,bytes,uint256)\":{\"details\":\"Called by {IRelayHub} to validate if this recipient accepts being charged for a relayed call. Note that the recipient will be charged regardless of the execution result of the relayed call (i.e. if it reverts or not).     * The relay request was originated by `from` and will be served by `relay`. `encodedFunction` is the relayed call calldata, so its first four bytes are the function selector. The relayed call will be forwarded `gasLimit` gas, and the transaction executed with a gas price of at least `gasPrice`. `relay`'s fee is `transactionFee`, and the recipient will be charged at most `maxPossibleCharge` (in wei). `nonce` is the sender's (`from`) nonce for replay attack protection in {IRelayHub}, and `approvalData` is a optional parameter that can be used to hold a signature over all or some of the previous values.     * Returns a tuple, where the first value is used to indicate approval (0) or rejection (custom non-zero error code, values 1 to 10 are reserved) and the second one is data to be passed to the other {IRelayRecipient} functions.     * {acceptRelayedCall} is called with 50k gas: if it runs out during execution, the request will be considered rejected. A regular revert will also trigger a rejection.\"},\"getHubAddr()\":{\"details\":\"Returns the address of the {IRelayHub} instance this recipient interacts with.\"},\"postRelayedCall(bytes,bool,uint256,bytes32)\":{\"details\":\"Called by {IRelayHub} on approved relay call requests, after the relayed call is executed. This allows to e.g. charge the user for the relayed call costs, return any overcharges from {preRelayedCall}, or perform contract-specific bookkeeping.     * `context` is the second value returned in the tuple by {acceptRelayedCall}. `success` is the execution status of the relayed call. `actualCharge` is an estimate of how much the recipient will be charged for the transaction, not including any gas used by {postRelayedCall} itself. `preRetVal` is {preRelayedCall}'s return value.     * {postRelayedCall} is called with 100k gas: if it runs out during execution or otherwise reverts, the relayed call and the call to {preRelayedCall} will be reverted retroactively, but the recipient will still be charged for the transaction's cost.\"},\"preRelayedCall(bytes)\":{\"details\":\"Called by {IRelayHub} on approved relay call requests, before the relayed call is executed. This allows to e.g. pre-charge the sender of the transaction.     * `context` is the second value returned in the tuple by {acceptRelayedCall}.     * Returns a value to be passed to {postRelayedCall}.     * {preRelayedCall} is called with 100k gas: if it runs out during exection or otherwise reverts, the relayed call will not be executed, but the recipient will still be charged for the transaction's cost.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/GSN/IRelayRecipient.sol\":\"IRelayRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/GSN/IRelayRecipient.sol\":{\"keccak256\":\"0x88c5716536287306f923379dae33b5e5bdc21d70ec0c440109f866d7edab7ca3\",\"urls\":[\"bzz-raw://4c5c6649a7603fb414d84fefef259e44a512df3d738c56250da1c8fa0271dc4c\",\"dweb:/ipfs/QmQGquucxTmw2isWEUf2JY25hFd5DR4U88zW7xhw5UgV3q\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.0;\n\n/**\n * @dev Base interface for a contract that will be called via the GSN from {IRelayHub}.\n *\n * TIP: You don't need to write an implementation yourself! Inherit from {GSNRecipient} instead.\n */\ninterface IRelayRecipient {\n    /**\n     * @dev Returns the address of the {IRelayHub} instance this recipient interacts with.\n     */\n    function getHubAddr() external view returns (address);\n\n    /**\n     * @dev Called by {IRelayHub} to validate if this recipient accepts being charged for a relayed call. Note that the\n     * recipient will be charged regardless of the execution result of the relayed call (i.e. if it reverts or not).\n     *\n     * The relay request was originated by `from` and will be served by `relay`. `encodedFunction` is the relayed call\n     * calldata, so its first four bytes are the function selector. The relayed call will be forwarded `gasLimit` gas,\n     * and the transaction executed with a gas price of at least `gasPrice`. `relay`'s fee is `transactionFee`, and the\n     * recipient will be charged at most `maxPossibleCharge` (in wei). `nonce` is the sender's (`from`) nonce for\n     * replay attack protection in {IRelayHub}, and `approvalData` is a optional parameter that can be used to hold a signature\n     * over all or some of the previous values.\n     *\n     * Returns a tuple, where the first value is used to indicate approval (0) or rejection (custom non-zero error code,\n     * values 1 to 10 are reserved) and the second one is data to be passed to the other {IRelayRecipient} functions.\n     *\n     * {acceptRelayedCall} is called with 50k gas: if it runs out during execution, the request will be considered\n     * rejected. A regular revert will also trigger a rejection.\n     */\n    function acceptRelayedCall(\n        address relay,\n        address from,\n        bytes calldata encodedFunction,\n        uint256 transactionFee,\n        uint256 gasPrice,\n        uint256 gasLimit,\n        uint256 nonce,\n        bytes calldata approvalData,\n        uint256 maxPossibleCharge\n    )\n        external\n        view\n        returns (uint256, bytes memory);\n\n    /**\n     * @dev Called by {IRelayHub} on approved relay call requests, before the relayed call is executed. This allows to e.g.\n     * pre-charge the sender of the transaction.\n     *\n     * `context` is the second value returned in the tuple by {acceptRelayedCall}.\n     *\n     * Returns a value to be passed to {postRelayedCall}.\n     *\n     * {preRelayedCall} is called with 100k gas: if it runs out during exection or otherwise reverts, the relayed call\n     * will not be executed, but the recipient will still be charged for the transaction's cost.\n     */\n    function preRelayedCall(bytes calldata context) external returns (bytes32);\n\n    /**\n     * @dev Called by {IRelayHub} on approved relay call requests, after the relayed call is executed. This allows to e.g.\n     * charge the user for the relayed call costs, return any overcharges from {preRelayedCall}, or perform\n     * contract-specific bookkeeping.\n     *\n     * `context` is the second value returned in the tuple by {acceptRelayedCall}. `success` is the execution status of\n     * the relayed call. `actualCharge` is an estimate of how much the recipient will be charged for the transaction,\n     * not including any gas used by {postRelayedCall} itself. `preRetVal` is {preRelayedCall}'s return value.\n     *\n     *\n     * {postRelayedCall} is called with 100k gas: if it runs out during execution or otherwise reverts, the relayed call\n     * and the call to {preRelayedCall} will be reverted retroactively, but the recipient will still be charged for the\n     * transaction's cost.\n     */\n    function postRelayedCall(bytes calldata context, bool success, uint256 actualCharge, bytes32 preRetVal) external;\n}\n",
+  "sourcePath": "/Users/sudipbhattarai/Documents/erc20-tokensale-gen/solidity-contracts/openzeppelin-contracts-v2.5/GSN/IRelayRecipient.sol",
+  "ast": {
+    "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/GSN/IRelayRecipient.sol",
+    "exportedSymbols": {
+      "IRelayRecipient": [
+        3200
+      ]
+    },
+    "id": 3201,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3151,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:62"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Base interface for a contract that will be called via the GSN from {IRelayHub}.\n * TIP: You don't need to write an implementation yourself! Inherit from {GSNRecipient} instead.",
+        "fullyImplemented": false,
+        "id": 3200,
+        "linearizedBaseContracts": [
+          3200
+        ],
+        "name": "IRelayRecipient",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Returns the address of the {IRelayHub} instance this recipient interacts with.",
+            "id": 3156,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getHubAddr",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3152,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "379:2:62"
+            },
+            "returnParameters": {
+              "id": 3155,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3154,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3156,
+                  "src": "405:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3153,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "405:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "404:9:62"
+            },
+            "scope": 3200,
+            "src": "360:54:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Called by {IRelayHub} to validate if this recipient accepts being charged for a relayed call. Note that the\nrecipient will be charged regardless of the execution result of the relayed call (i.e. if it reverts or not).\n     * The relay request was originated by `from` and will be served by `relay`. `encodedFunction` is the relayed call\ncalldata, so its first four bytes are the function selector. The relayed call will be forwarded `gasLimit` gas,\nand the transaction executed with a gas price of at least `gasPrice`. `relay`'s fee is `transactionFee`, and the\nrecipient will be charged at most `maxPossibleCharge` (in wei). `nonce` is the sender's (`from`) nonce for\nreplay attack protection in {IRelayHub}, and `approvalData` is a optional parameter that can be used to hold a signature\nover all or some of the previous values.\n     * Returns a tuple, where the first value is used to indicate approval (0) or rejection (custom non-zero error code,\nvalues 1 to 10 are reserved) and the second one is data to be passed to the other {IRelayRecipient} functions.\n     * {acceptRelayedCall} is called with 50k gas: if it runs out during execution, the request will be considered\nrejected. A regular revert will also trigger a rejection.",
+            "id": 3181,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptRelayedCall",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3175,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3158,
+                  "name": "relay",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "1797:13:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3157,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1797:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3160,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "1820:12:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3159,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1820:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3162,
+                  "name": "encodedFunction",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "1842:30:62",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3161,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1842:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3164,
+                  "name": "transactionFee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "1882:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3163,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1882:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3166,
+                  "name": "gasPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "1914:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3165,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1914:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3168,
+                  "name": "gasLimit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "1940:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3167,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1940:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3170,
+                  "name": "nonce",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "1966:13:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3169,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1966:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3172,
+                  "name": "approvalData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "1989:27:62",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3171,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1989:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3174,
+                  "name": "maxPossibleCharge",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "2026:25:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3173,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2026:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1787:270:62"
+            },
+            "returnParameters": {
+              "id": 3180,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3177,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "2105:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3176,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2105:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3179,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3181,
+                  "src": "2114:12:62",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3178,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2114:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2104:23:62"
+            },
+            "scope": 3200,
+            "src": "1761:367:62",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Called by {IRelayHub} on approved relay call requests, before the relayed call is executed. This allows to e.g.\npre-charge the sender of the transaction.\n     * `context` is the second value returned in the tuple by {acceptRelayedCall}.\n     * Returns a value to be passed to {postRelayedCall}.\n     * {preRelayedCall} is called with 100k gas: if it runs out during exection or otherwise reverts, the relayed call\nwill not be executed, but the recipient will still be charged for the transaction's cost.",
+            "id": 3188,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "preRelayedCall",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3184,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3183,
+                  "name": "context",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3188,
+                  "src": "2725:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3182,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2725:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2724:24:62"
+            },
+            "returnParameters": {
+              "id": 3187,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3186,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3188,
+                  "src": "2767:7:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3185,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2767:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2766:9:62"
+            },
+            "scope": 3200,
+            "src": "2701:75:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Called by {IRelayHub} on approved relay call requests, after the relayed call is executed. This allows to e.g.\ncharge the user for the relayed call costs, return any overcharges from {preRelayedCall}, or perform\ncontract-specific bookkeeping.\n     * `context` is the second value returned in the tuple by {acceptRelayedCall}. `success` is the execution status of\nthe relayed call. `actualCharge` is an estimate of how much the recipient will be charged for the transaction,\nnot including any gas used by {postRelayedCall} itself. `preRetVal` is {preRelayedCall}'s return value.\n     *\n{postRelayedCall} is called with 100k gas: if it runs out during execution or otherwise reverts, the relayed call\nand the call to {preRelayedCall} will be reverted retroactively, but the recipient will still be charged for the\ntransaction's cost.",
+            "id": 3199,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "postRelayedCall",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3197,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3190,
+                  "name": "context",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3199,
+                  "src": "3730:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3189,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3730:5:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3192,
+                  "name": "success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3199,
+                  "src": "3754:12:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3191,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3754:4:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3194,
+                  "name": "actualCharge",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3199,
+                  "src": "3768:20:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3768:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3196,
+                  "name": "preRetVal",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3199,
+                  "src": "3790:17:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3195,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3790:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3729:79:62"
+            },
+            "returnParameters": {
+              "id": 3198,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3817:0:62"
+            },
+            "scope": 3200,
+            "src": "3705:113:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3201,
+        "src": "221:3599:62"
+      }
+    ],
+    "src": "0:3821:62"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/GSN/IRelayRecipient.sol",
+      "exportedSymbols": {
+        "IRelayRecipient": [
+          3200
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 3151,
+        "name": "PragmaDirective",
+        "src": "0:23:62"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": "@dev Base interface for a contract that will be called via the GSN from {IRelayHub}.\n * TIP: You don't need to write an implementation yourself! Inherit from {GSNRecipient} instead.",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            3200
+          ],
+          "name": "IRelayRecipient",
+          "scope": 3201
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev Returns the address of the {IRelayHub} instance this recipient interacts with.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getHubAddr",
+              "scope": 3200,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3152,
+                "name": "ParameterList",
+                "src": "379:2:62"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3156,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3153,
+                        "name": "ElementaryTypeName",
+                        "src": "405:7:62"
+                      }
+                    ],
+                    "id": 3154,
+                    "name": "VariableDeclaration",
+                    "src": "405:7:62"
+                  }
+                ],
+                "id": 3155,
+                "name": "ParameterList",
+                "src": "404:9:62"
+              }
+            ],
+            "id": 3156,
+            "name": "FunctionDefinition",
+            "src": "360:54:62"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev Called by {IRelayHub} to validate if this recipient accepts being charged for a relayed call. Note that the\nrecipient will be charged regardless of the execution result of the relayed call (i.e. if it reverts or not).\n     * The relay request was originated by `from` and will be served by `relay`. `encodedFunction` is the relayed call\ncalldata, so its first four bytes are the function selector. The relayed call will be forwarded `gasLimit` gas,\nand the transaction executed with a gas price of at least `gasPrice`. `relay`'s fee is `transactionFee`, and the\nrecipient will be charged at most `maxPossibleCharge` (in wei). `nonce` is the sender's (`from`) nonce for\nreplay attack protection in {IRelayHub}, and `approvalData` is a optional parameter that can be used to hold a signature\nover all or some of the previous values.\n     * Returns a tuple, where the first value is used to indicate approval (0) or rejection (custom non-zero error code,\nvalues 1 to 10 are reserved) and the second one is data to be passed to the other {IRelayRecipient} functions.\n     * {acceptRelayedCall} is called with 50k gas: if it runs out during execution, the request will be considered\nrejected. A regular revert will also trigger a rejection.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "acceptRelayedCall",
+              "scope": 3200,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "relay",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3157,
+                        "name": "ElementaryTypeName",
+                        "src": "1797:7:62"
+                      }
+                    ],
+                    "id": 3158,
+                    "name": "VariableDeclaration",
+                    "src": "1797:13:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "from",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 3159,
+                        "name": "ElementaryTypeName",
+                        "src": "1820:7:62"
+                      }
+                    ],
+                    "id": 3160,
+                    "name": "VariableDeclaration",
+                    "src": "1820:12:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "encodedFunction",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 3161,
+                        "name": "ElementaryTypeName",
+                        "src": "1842:5:62"
+                      }
+                    ],
+                    "id": 3162,
+                    "name": "VariableDeclaration",
+                    "src": "1842:30:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "transactionFee",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3163,
+                        "name": "ElementaryTypeName",
+                        "src": "1882:7:62"
+                      }
+                    ],
+                    "id": 3164,
+                    "name": "VariableDeclaration",
+                    "src": "1882:22:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "gasPrice",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3165,
+                        "name": "ElementaryTypeName",
+                        "src": "1914:7:62"
+                      }
+                    ],
+                    "id": 3166,
+                    "name": "VariableDeclaration",
+                    "src": "1914:16:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "gasLimit",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3167,
+                        "name": "ElementaryTypeName",
+                        "src": "1940:7:62"
+                      }
+                    ],
+                    "id": 3168,
+                    "name": "VariableDeclaration",
+                    "src": "1940:16:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "nonce",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3169,
+                        "name": "ElementaryTypeName",
+                        "src": "1966:7:62"
+                      }
+                    ],
+                    "id": 3170,
+                    "name": "VariableDeclaration",
+                    "src": "1966:13:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "approvalData",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 3171,
+                        "name": "ElementaryTypeName",
+                        "src": "1989:5:62"
+                      }
+                    ],
+                    "id": 3172,
+                    "name": "VariableDeclaration",
+                    "src": "1989:27:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "maxPossibleCharge",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3173,
+                        "name": "ElementaryTypeName",
+                        "src": "2026:7:62"
+                      }
+                    ],
+                    "id": 3174,
+                    "name": "VariableDeclaration",
+                    "src": "2026:25:62"
+                  }
+                ],
+                "id": 3175,
+                "name": "ParameterList",
+                "src": "1787:270:62"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3176,
+                        "name": "ElementaryTypeName",
+                        "src": "2105:7:62"
+                      }
+                    ],
+                    "id": 3177,
+                    "name": "VariableDeclaration",
+                    "src": "2105:7:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3181,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 3178,
+                        "name": "ElementaryTypeName",
+                        "src": "2114:5:62"
+                      }
+                    ],
+                    "id": 3179,
+                    "name": "VariableDeclaration",
+                    "src": "2114:12:62"
+                  }
+                ],
+                "id": 3180,
+                "name": "ParameterList",
+                "src": "2104:23:62"
+              }
+            ],
+            "id": 3181,
+            "name": "FunctionDefinition",
+            "src": "1761:367:62"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev Called by {IRelayHub} on approved relay call requests, before the relayed call is executed. This allows to e.g.\npre-charge the sender of the transaction.\n     * `context` is the second value returned in the tuple by {acceptRelayedCall}.\n     * Returns a value to be passed to {postRelayedCall}.\n     * {preRelayedCall} is called with 100k gas: if it runs out during exection or otherwise reverts, the relayed call\nwill not be executed, but the recipient will still be charged for the transaction's cost.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "preRelayedCall",
+              "scope": 3200,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "context",
+                      "scope": 3188,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 3182,
+                        "name": "ElementaryTypeName",
+                        "src": "2725:5:62"
+                      }
+                    ],
+                    "id": 3183,
+                    "name": "VariableDeclaration",
+                    "src": "2725:22:62"
+                  }
+                ],
+                "id": 3184,
+                "name": "ParameterList",
+                "src": "2724:24:62"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 3188,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 3185,
+                        "name": "ElementaryTypeName",
+                        "src": "2767:7:62"
+                      }
+                    ],
+                    "id": 3186,
+                    "name": "VariableDeclaration",
+                    "src": "2767:7:62"
+                  }
+                ],
+                "id": 3187,
+                "name": "ParameterList",
+                "src": "2766:9:62"
+              }
+            ],
+            "id": 3188,
+            "name": "FunctionDefinition",
+            "src": "2701:75:62"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev Called by {IRelayHub} on approved relay call requests, after the relayed call is executed. This allows to e.g.\ncharge the user for the relayed call costs, return any overcharges from {preRelayedCall}, or perform\ncontract-specific bookkeeping.\n     * `context` is the second value returned in the tuple by {acceptRelayedCall}. `success` is the execution status of\nthe relayed call. `actualCharge` is an estimate of how much the recipient will be charged for the transaction,\nnot including any gas used by {postRelayedCall} itself. `preRetVal` is {preRelayedCall}'s return value.\n     *\n{postRelayedCall} is called with 100k gas: if it runs out during execution or otherwise reverts, the relayed call\nand the call to {preRelayedCall} will be reverted retroactively, but the recipient will still be charged for the\ntransaction's cost.",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "postRelayedCall",
+              "scope": 3200,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "context",
+                      "scope": 3199,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 3189,
+                        "name": "ElementaryTypeName",
+                        "src": "3730:5:62"
+                      }
+                    ],
+                    "id": 3190,
+                    "name": "VariableDeclaration",
+                    "src": "3730:22:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "success",
+                      "scope": 3199,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 3191,
+                        "name": "ElementaryTypeName",
+                        "src": "3754:4:62"
+                      }
+                    ],
+                    "id": 3192,
+                    "name": "VariableDeclaration",
+                    "src": "3754:12:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "actualCharge",
+                      "scope": 3199,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 3193,
+                        "name": "ElementaryTypeName",
+                        "src": "3768:7:62"
+                      }
+                    ],
+                    "id": 3194,
+                    "name": "VariableDeclaration",
+                    "src": "3768:20:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "preRetVal",
+                      "scope": 3199,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 3195,
+                        "name": "ElementaryTypeName",
+                        "src": "3790:7:62"
+                      }
+                    ],
+                    "id": 3196,
+                    "name": "VariableDeclaration",
+                    "src": "3790:17:62"
+                  }
+                ],
+                "id": 3197,
+                "name": "ParameterList",
+                "src": "3729:79:62"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3198,
+                "name": "ParameterList",
+                "src": "3817:0:62"
+              }
+            ],
+            "id": 3199,
+            "name": "FunctionDefinition",
+            "src": "3705:113:62"
+          }
+        ],
+        "id": 3200,
+        "name": "ContractDefinition",
+        "src": "221:3599:62"
+      }
+    ],
+    "id": 3201,
+    "name": "SourceUnit",
+    "src": "0:3821:62"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-06T18:13:26.086Z",
+  "devdoc": {
+    "details": "Base interface for a contract that will be called via the GSN from {IRelayHub}. * TIP: You don't need to write an implementation yourself! Inherit from {GSNRecipient} instead.",
+    "methods": {
+      "acceptRelayedCall(address,address,bytes,uint256,uint256,uint256,uint256,bytes,uint256)": {
+        "details": "Called by {IRelayHub} to validate if this recipient accepts being charged for a relayed call. Note that the recipient will be charged regardless of the execution result of the relayed call (i.e. if it reverts or not).     * The relay request was originated by `from` and will be served by `relay`. `encodedFunction` is the relayed call calldata, so its first four bytes are the function selector. The relayed call will be forwarded `gasLimit` gas, and the transaction executed with a gas price of at least `gasPrice`. `relay`'s fee is `transactionFee`, and the recipient will be charged at most `maxPossibleCharge` (in wei). `nonce` is the sender's (`from`) nonce for replay attack protection in {IRelayHub}, and `approvalData` is a optional parameter that can be used to hold a signature over all or some of the previous values.     * Returns a tuple, where the first value is used to indicate approval (0) or rejection (custom non-zero error code, values 1 to 10 are reserved) and the second one is data to be passed to the other {IRelayRecipient} functions.     * {acceptRelayedCall} is called with 50k gas: if it runs out during execution, the request will be considered rejected. A regular revert will also trigger a rejection."
+      },
+      "getHubAddr()": {
+        "details": "Returns the address of the {IRelayHub} instance this recipient interacts with."
+      },
+      "postRelayedCall(bytes,bool,uint256,bytes32)": {
+        "details": "Called by {IRelayHub} on approved relay call requests, after the relayed call is executed. This allows to e.g. charge the user for the relayed call costs, return any overcharges from {preRelayedCall}, or perform contract-specific bookkeeping.     * `context` is the second value returned in the tuple by {acceptRelayedCall}. `success` is the execution status of the relayed call. `actualCharge` is an estimate of how much the recipient will be charged for the transaction, not including any gas used by {postRelayedCall} itself. `preRetVal` is {preRelayedCall}'s return value.     * {postRelayedCall} is called with 100k gas: if it runs out during execution or otherwise reverts, the relayed call and the call to {preRelayedCall} will be reverted retroactively, but the recipient will still be charged for the transaction's cost."
+      },
+      "preRelayedCall(bytes)": {
+        "details": "Called by {IRelayHub} on approved relay call requests, before the relayed call is executed. This allows to e.g. pre-charge the sender of the transaction.     * `context` is the second value returned in the tuple by {acceptRelayedCall}.     * Returns a value to be passed to {postRelayedCall}.     * {preRelayedCall} is called with 100k gas: if it runs out during exection or otherwise reverts, the relayed call will not be executed, but the recipient will still be charged for the transaction's cost."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

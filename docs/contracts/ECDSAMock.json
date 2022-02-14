@@ -1,0 +1,929 @@
+{
+  "contractName": "ECDSAMock",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "hash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
+        }
+      ],
+      "name": "recover",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "hash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "toEthSignedMessageHash",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"hash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"recover\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"hash\",\"type\":\"bytes32\"}],\"name\":\"toEthSignedMessageHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/ECDSAMock.sol\":\"ECDSAMock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/cryptography/ECDSA.sol\":{\"keccak256\":\"0xc89ea7e48ba477b1781b24ae963442fff1bb2af33b6178dad679a3fa2f5ab2de\",\"urls\":[\"bzz-raw://b736ddad8143f8f1cd13c20809d4ebce5f5a8c7725081b0b703294078bd506d1\",\"dweb:/ipfs/QmdhTWCXFCuwG9JaPMjwnhkQoDj9su8R7KMPNvD5z9KeWD\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/ECDSAMock.sol\":{\"keccak256\":\"0x32becaabff3773f88196e553111d4834d33e3dfee0682bae38dd35dbe7e71eb7\",\"urls\":[\"bzz-raw://11d7b6c41c33f09c037fa462a3e3ebf45613a4a4a836a9d8d31f7d0052d7a762\",\"dweb:/ipfs/QmbXWRRR7fS8hgqSsEByZsX8CQcHzsTaqSc4m5FvJnW7NM\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102cd806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c806319045a251461003b578063918a15cf14610104575b600080fd5b6100e86004803603604081101561005157600080fd5b8135919081019060408101602082013564010000000081111561007357600080fd5b82018360208201111561008557600080fd5b803590602001918460018302840111640100000000831117156100a757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610133945050505050565b604080516001600160a01b039092168252519081900360200190f35b6101216004803603602081101561011a57600080fd5b503561014e565b60408051918252519081900360200190f35b6000610145838363ffffffff61015916565b90505b92915050565b600061014882610247565b6000815160411461016c57506000610148565b60208201516040830151606084015160001a7f7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a08211156101b25760009350505050610148565b8060ff16601b141580156101ca57508060ff16601c14155b156101db5760009350505050610148565b6040805160008152602080820180845289905260ff8416828401526060820186905260808201859052915160019260a0808401939192601f1981019281900390910190855afa158015610232573d6000803e3d6000fd5b5050604051601f190151979650505050505050565b604080517f19457468657265756d205369676e6564204d6573736167653a0a333200000000602080830191909152603c8083019490945282518083039094018452605c90910190915281519101209056fea265627a7a72315820d38659cef2db2d7fc208ca47d104162d514ed798d690e10cdbd75cf8cbff3ad564736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c806319045a251461003b578063918a15cf14610104575b600080fd5b6100e86004803603604081101561005157600080fd5b8135919081019060408101602082013564010000000081111561007357600080fd5b82018360208201111561008557600080fd5b803590602001918460018302840111640100000000831117156100a757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610133945050505050565b604080516001600160a01b039092168252519081900360200190f35b6101216004803603602081101561011a57600080fd5b503561014e565b60408051918252519081900360200190f35b6000610145838363ffffffff61015916565b90505b92915050565b600061014882610247565b6000815160411461016c57506000610148565b60208201516040830151606084015160001a7f7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a08211156101b25760009350505050610148565b8060ff16601b141580156101ca57508060ff16601c14155b156101db5760009350505050610148565b6040805160008152602080820180845289905260ff8416828401526060820186905260808201859052915160019260a0808401939192601f1981019281900390910190855afa158015610232573d6000803e3d6000fd5b5050604051601f190151979650505050505050565b604080517f19457468657265756d205369676e6564204d6573736167653a0a333200000000602080830191909152603c8083019490945282518083039094018452605c90910190915281519101209056fea265627a7a72315820d38659cef2db2d7fc208ca47d104162d514ed798d690e10cdbd75cf8cbff3ad564736f6c63430005110032",
+  "sourceMap": "62:324:115:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;62:324:115;;;;;;;",
+  "deployedSourceMap": "62:324:115:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;62:324:115;;;;;;;;;;;;;;;;;;;;;;;;117:132;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;117:132:115;;;;;;;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;117:132:115;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;117:132:115;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;117:132:115;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;117:132:115;;-1:-1:-1;117:132:115;;-1:-1:-1;;;;;117:132:115:i;:::-;;;;-1:-1:-1;;;;;117:132:115;;;;;;;;;;;;;;255:129;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;255:129:115;;:::i;:::-;;;;;;;;;;;;;;;;117:132;193:7;219:23;:4;232:9;219:23;:12;:23;:::i;:::-;212:30;;117:132;;;;;:::o;255:129::-;322:7;348:29;:4;:27;:29::i;1226:1891:85:-;1304:7;1365:9;:16;1385:2;1365:22;1361:72;;-1:-1:-1;1419:1:85;1403:19;;1361:72;1783:4;1768:20;;1762:27;1828:4;1813:20;;1807:27;1881:4;1866:20;;1860:27;1499:9;1852:36;2799:66;2786:79;;2782:127;;;2896:1;2881:17;;;;;;;2782:127;2923:1;:7;;2928:2;2923:7;;:18;;;;;2934:1;:7;;2939:2;2934:7;;2923:18;2919:66;;;2972:1;2957:17;;;;;;;2919:66;3086:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;3086:24:85;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;3086:24:85;;-1:-1:-1;;3086:24:85;;;1226:1891;-1:-1:-1;;;;;;;1226:1891:85:o;3381:265::-;3580:58;;;;;;;;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;3580:58:85;;;;;;;3570:69;;;;;;3381:265::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../cryptography/ECDSA.sol\";\n\ncontract ECDSAMock {\n    using ECDSA for bytes32;\n\n    function recover(bytes32 hash, bytes memory signature) public pure returns (address) {\n        return hash.recover(signature);\n    }\n\n    function toEthSignedMessageHash(bytes32 hash) public pure returns (bytes32) {\n        return hash.toEthSignedMessageHash();\n    }\n}\n",
+  "sourcePath": "/Users/sudipbhattarai/Documents/erc20-tokensale-gen/solidity-contracts/openzeppelin-contracts-v2.5/mocks/ECDSAMock.sol",
+  "ast": {
+    "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/ECDSAMock.sol",
+    "exportedSymbols": {
+      "ECDSAMock": [
+        7834
+      ]
+    },
+    "id": 7835,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7802,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:115"
+      },
+      {
+        "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/cryptography/ECDSA.sol",
+        "file": "../cryptography/ECDSA.sol",
+        "id": 7803,
+        "nodeType": "ImportDirective",
+        "scope": 7835,
+        "sourceUnit": 5293,
+        "src": "25:35:115",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7834,
+        "linearizedBaseContracts": [
+          7834
+        ],
+        "name": "ECDSAMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 7806,
+            "libraryName": {
+              "contractScope": null,
+              "id": 7804,
+              "name": "ECDSA",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5292,
+              "src": "93:5:115",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ECDSA_$5292",
+                "typeString": "library ECDSA"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "87:24:115",
+            "typeName": {
+              "id": 7805,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "103:7:115",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            }
+          },
+          {
+            "body": {
+              "id": 7820,
+              "nodeType": "Block",
+              "src": "202:47:115",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7817,
+                        "name": "signature",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7810,
+                        "src": "232:9:115",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7815,
+                        "name": "hash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7808,
+                        "src": "219:4:115",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "id": 7816,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "recover",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5275,
+                      "src": "219:12:115",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_address_$bound_to$_t_bytes32_$",
+                        "typeString": "function (bytes32,bytes memory) pure returns (address)"
+                      }
+                    },
+                    "id": 7818,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "219:23:115",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 7814,
+                  "id": 7819,
+                  "nodeType": "Return",
+                  "src": "212:30:115"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7821,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "recover",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7811,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7808,
+                  "name": "hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7821,
+                  "src": "134:12:115",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7807,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "134:7:115",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7810,
+                  "name": "signature",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7821,
+                  "src": "148:22:115",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 7809,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "148:5:115",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "133:38:115"
+            },
+            "returnParameters": {
+              "id": 7814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7813,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7821,
+                  "src": "193:7:115",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7812,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "193:7:115",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "192:9:115"
+            },
+            "scope": 7834,
+            "src": "117:132:115",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7832,
+              "nodeType": "Block",
+              "src": "331:53:115",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7828,
+                        "name": "hash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7823,
+                        "src": "348:4:115",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "id": 7829,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "toEthSignedMessageHash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5291,
+                      "src": "348:27:115",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$returns$_t_bytes32_$bound_to$_t_bytes32_$",
+                        "typeString": "function (bytes32) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 7830,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "348:29:115",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 7827,
+                  "id": 7831,
+                  "nodeType": "Return",
+                  "src": "341:36:115"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7833,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "toEthSignedMessageHash",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7824,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7823,
+                  "name": "hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7833,
+                  "src": "287:12:115",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7822,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "287:7:115",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:14:115"
+            },
+            "returnParameters": {
+              "id": 7827,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7826,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7833,
+                  "src": "322:7:115",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 7825,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "322:7:115",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "321:9:115"
+            },
+            "scope": 7834,
+            "src": "255:129:115",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7835,
+        "src": "62:324:115"
+      }
+    ],
+    "src": "0:387:115"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/ECDSAMock.sol",
+      "exportedSymbols": {
+        "ECDSAMock": [
+          7834
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 7802,
+        "name": "PragmaDirective",
+        "src": "0:23:115"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 5293,
+          "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/cryptography/ECDSA.sol",
+          "file": "../cryptography/ECDSA.sol",
+          "scope": 7835,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 7803,
+        "name": "ImportDirective",
+        "src": "25:35:115"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7834
+          ],
+          "name": "ECDSAMock",
+          "scope": 7835
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ECDSA",
+                  "referencedDeclaration": 5292,
+                  "type": "library ECDSA"
+                },
+                "id": 7804,
+                "name": "UserDefinedTypeName",
+                "src": "93:5:115"
+              },
+              {
+                "attributes": {
+                  "name": "bytes32",
+                  "type": "bytes32"
+                },
+                "id": 7805,
+                "name": "ElementaryTypeName",
+                "src": "103:7:115"
+              }
+            ],
+            "id": 7806,
+            "name": "UsingForDirective",
+            "src": "87:24:115"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "recover",
+              "scope": 7834,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "hash",
+                      "scope": 7821,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 7807,
+                        "name": "ElementaryTypeName",
+                        "src": "134:7:115"
+                      }
+                    ],
+                    "id": 7808,
+                    "name": "VariableDeclaration",
+                    "src": "134:12:115"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "signature",
+                      "scope": 7821,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 7809,
+                        "name": "ElementaryTypeName",
+                        "src": "148:5:115"
+                      }
+                    ],
+                    "id": 7810,
+                    "name": "VariableDeclaration",
+                    "src": "148:22:115"
+                  }
+                ],
+                "id": 7811,
+                "name": "ParameterList",
+                "src": "133:38:115"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 7821,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 7812,
+                        "name": "ElementaryTypeName",
+                        "src": "193:7:115"
+                      }
+                    ],
+                    "id": 7813,
+                    "name": "VariableDeclaration",
+                    "src": "193:7:115"
+                  }
+                ],
+                "id": 7814,
+                "name": "ParameterList",
+                "src": "192:9:115"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 7814
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "address",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes_memory_ptr",
+                                  "typeString": "bytes memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "recover",
+                              "referencedDeclaration": 5275,
+                              "type": "function (bytes32,bytes memory) pure returns (address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7808,
+                                  "type": "bytes32",
+                                  "value": "hash"
+                                },
+                                "id": 7815,
+                                "name": "Identifier",
+                                "src": "219:4:115"
+                              }
+                            ],
+                            "id": 7816,
+                            "name": "MemberAccess",
+                            "src": "219:12:115"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7810,
+                              "type": "bytes memory",
+                              "value": "signature"
+                            },
+                            "id": 7817,
+                            "name": "Identifier",
+                            "src": "232:9:115"
+                          }
+                        ],
+                        "id": 7818,
+                        "name": "FunctionCall",
+                        "src": "219:23:115"
+                      }
+                    ],
+                    "id": 7819,
+                    "name": "Return",
+                    "src": "212:30:115"
+                  }
+                ],
+                "id": 7820,
+                "name": "Block",
+                "src": "202:47:115"
+              }
+            ],
+            "id": 7821,
+            "name": "FunctionDefinition",
+            "src": "117:132:115"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "toEthSignedMessageHash",
+              "scope": 7834,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "hash",
+                      "scope": 7833,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 7822,
+                        "name": "ElementaryTypeName",
+                        "src": "287:7:115"
+                      }
+                    ],
+                    "id": 7823,
+                    "name": "VariableDeclaration",
+                    "src": "287:12:115"
+                  }
+                ],
+                "id": 7824,
+                "name": "ParameterList",
+                "src": "286:14:115"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 7833,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 7825,
+                        "name": "ElementaryTypeName",
+                        "src": "322:7:115"
+                      }
+                    ],
+                    "id": 7826,
+                    "name": "VariableDeclaration",
+                    "src": "322:7:115"
+                  }
+                ],
+                "id": 7827,
+                "name": "ParameterList",
+                "src": "321:9:115"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 7827
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bytes32",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "toEthSignedMessageHash",
+                              "referencedDeclaration": 5291,
+                              "type": "function (bytes32) pure returns (bytes32)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7823,
+                                  "type": "bytes32",
+                                  "value": "hash"
+                                },
+                                "id": 7828,
+                                "name": "Identifier",
+                                "src": "348:4:115"
+                              }
+                            ],
+                            "id": 7829,
+                            "name": "MemberAccess",
+                            "src": "348:27:115"
+                          }
+                        ],
+                        "id": 7830,
+                        "name": "FunctionCall",
+                        "src": "348:29:115"
+                      }
+                    ],
+                    "id": 7831,
+                    "name": "Return",
+                    "src": "341:36:115"
+                  }
+                ],
+                "id": 7832,
+                "name": "Block",
+                "src": "331:53:115"
+              }
+            ],
+            "id": 7833,
+            "name": "FunctionDefinition",
+            "src": "255:129:115"
+          }
+        ],
+        "id": 7834,
+        "name": "ContractDefinition",
+        "src": "62:324:115"
+      }
+    ],
+    "id": 7835,
+    "name": "SourceUnit",
+    "src": "0:387:115"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-06T18:13:26.144Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/create-token", {data:[{},{}],fetch:{},mutations:[]});

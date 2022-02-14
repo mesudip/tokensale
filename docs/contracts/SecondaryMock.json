@@ -1,0 +1,377 @@
+{
+  "contractName": "SecondaryMock",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "PrimaryTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "primary",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "transferPrimary",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "onlyPrimaryMock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"PrimaryTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"onlyPrimaryMock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"primary\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"transferPrimary\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"primary()\":{\"return\":\"the address of the primary.\"},\"transferPrimary(address)\":{\"details\":\"Transfers contract to a new primary.\",\"params\":{\"recipient\":\"The address of new primary.\"}}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SecondaryMock.sol\":\"SecondaryMock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/GSN/Context.sol\":{\"keccak256\":\"0x90a3995645af7562d84b9d69363ffa5ae7217714ab61e951bf7bc450f40e4061\",\"urls\":[\"bzz-raw://216ef9d6b614db4eb46970b4e84903f2534a45572dd30a79f0041f1a5830f436\",\"dweb:/ipfs/QmNPrJ4MWKUAWzKXpUqeyKRUfosaoANZAqXgvepdrCwZAG\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SecondaryMock.sol\":{\"keccak256\":\"0x4529ca2e41a15dc9c5df5b69a967cb9bdaa615ed4bd49a23871777ceb702b02c\",\"urls\":[\"bzz-raw://8af23e1b8bd8e5d9bbd0a7fb7f4c45721e381eaeae8d5d04510eb5f28e604d73\",\"dweb:/ipfs/QmXEnw6vUTaUSRABJwoj8esd7mz2PyVPe8LiNNkpswRAYh\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/ownership/Secondary.sol\":{\"keccak256\":\"0xb55d511ea1d79aa4ff7063ac50d134a47c6d3b43b0ee7163e9310c403a945888\",\"urls\":[\"bzz-raw://3dbac745f30f95972c78216578173f098cf89fbcd7e976e26bcd6e8707553d61\",\"dweb:/ipfs/Qme7K9o8sEYRcwUfe5VNnpbGGiTyPYbrSxZNUkm2qXJ9VK\"]}},\"version\":1}",
+  "bytecode": "0x608060405260006100176001600160e01b0361007216565b600080546001600160a01b0383166001600160a01b0319909116811790915560408051918252519192507f4101e71e974f68df5e9730cc223280b41654676bbb052cdcc735c3337e64d2d9919081900360200190a150610076565b3390565b610285806100856000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80632348238c14610046578063846224251461006e578063c6dbdf6114610076575b600080fd5b61006c6004803603602081101561005c57600080fd5b50356001600160a01b031661009a565b005b61006c61018c565b61007e6101e7565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03166100ae6101f6565b6001600160a01b0316146100f35760405162461bcd60e51b815260040180806020018281038252602c815260200180610225602c913960400191505060405180910390fd5b6001600160a01b0381166101385760405162461bcd60e51b815260040180806020018281038252602a8152602001806101fb602a913960400191505060405180910390fd5b600080546001600160a01b0383166001600160a01b0319909116811790915560408051918252517f4101e71e974f68df5e9730cc223280b41654676bbb052cdcc735c3337e64d2d99181900360200190a150565b6000546001600160a01b03166101a06101f6565b6001600160a01b0316146101e55760405162461bcd60e51b815260040180806020018281038252602c815260200180610225602c913960400191505060405180910390fd5b565b6000546001600160a01b031690565b339056fe5365636f6e646172793a206e6577207072696d61727920697320746865207a65726f20616464726573735365636f6e646172793a2063616c6c6572206973206e6f7420746865207072696d617279206163636f756e74a265627a7a72315820acaeccd69a42043c6c79c9e013c2426ed90bf3a7be62a2518595bbdb0a22bcd864736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80632348238c14610046578063846224251461006e578063c6dbdf6114610076575b600080fd5b61006c6004803603602081101561005c57600080fd5b50356001600160a01b031661009a565b005b61006c61018c565b61007e6101e7565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03166100ae6101f6565b6001600160a01b0316146100f35760405162461bcd60e51b815260040180806020018281038252602c815260200180610225602c913960400191505060405180910390fd5b6001600160a01b0381166101385760405162461bcd60e51b815260040180806020018281038252602a8152602001806101fb602a913960400191505060405180910390fd5b600080546001600160a01b0383166001600160a01b0319909116811790915560408051918252517f4101e71e974f68df5e9730cc223280b41654676bbb052cdcc735c3337e64d2d99181900360200190a150565b6000546001600160a01b03166101a06101f6565b6001600160a01b0316146101e55760405162461bcd60e51b815260040180806020018281038252602c815260200180610225602c913960400191505060405180910390fd5b565b6000546001600160a01b031690565b339056fe5365636f6e646172793a206e6577207072696d61727920697320746865207a65726f20616464726573735365636f6e646172793a2063616c6c6572206973206e6f7420746865207072696d617279206163636f756e74a265627a7a72315820acaeccd69a42043c6c79c9e013c2426ed90bf3a7be62a2518595bbdb0a22bcd864736f6c63430005110032",
+  "sourceMap": "63:159:163:-;;;499:17:172;519:12;-1:-1:-1;;;;;519:10:172;:12;:::i;:::-;541:8;:20;;-1:-1:-1;;;;;541:20:172;;-1:-1:-1;;;;;;541:20:172;;;;;;;;576:29;;;;;;;499:32;;-1:-1:-1;576:29:172;;;;;;;;;;465:147;63:159:163;;788:96:57;867:10;788:96;:::o;63:159:163:-;;;;;;;",
+  "deployedSourceMap": "63:159:163:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:159:163;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1106:232:172;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1106:232:172;-1:-1:-1;;;;;1106:232:172;;:::i;:::-;;105:115:163;;;:::i;902:81:172:-;;;:::i;:::-;;;;-1:-1:-1;;;;;902:81:172;;;;;;;;;;;;;;1106:232;762:8;;-1:-1:-1;;;;;762:8:172;746:12;:10;:12::i;:::-;-1:-1:-1;;;;;746:24:172;;738:81;;;;-1:-1:-1;;;738:81:172;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;1187:23:172;;1179:78;;;;-1:-1:-1;;;1179:78:172;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1267:8;:20;;-1:-1:-1;;;;;1267:20:172;;-1:-1:-1;;;;;;1267:20:172;;;;;;;;1302:29;;;;;;;;;;;;;;;;1106:232;:::o;105:115:163:-;762:8:172;;-1:-1:-1;;;;;762:8:172;746:12;:10;:12::i;:::-;-1:-1:-1;;;;;746:24:172;;738:81;;;;-1:-1:-1;;;738:81:172;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;105:115:163:o;902:81:172:-;942:7;968:8;-1:-1:-1;;;;;968:8:172;902:81;:::o;788:96:57:-;867:10;788:96;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../ownership/Secondary.sol\";\n\ncontract SecondaryMock is Secondary {\n    function onlyPrimaryMock() public view onlyPrimary {\n        // solhint-disable-previous-line no-empty-blocks\n    }\n}\n",
+  "sourcePath": "/Users/sudipbhattarai/Documents/erc20-tokensale-gen/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SecondaryMock.sol",
+  "ast": {
+    "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SecondaryMock.sol",
+    "exportedSymbols": {
+      "SecondaryMock": [
+        10450
+      ]
+    },
+    "id": 10451,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10440,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:163"
+      },
+      {
+        "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/ownership/Secondary.sol",
+        "file": "../ownership/Secondary.sol",
+        "id": 10441,
+        "nodeType": "ImportDirective",
+        "scope": 10451,
+        "sourceUnit": 10873,
+        "src": "25:36:163",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 10442,
+              "name": "Secondary",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 10872,
+              "src": "89:9:163",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Secondary_$10872",
+                "typeString": "contract Secondary"
+              }
+            },
+            "id": 10443,
+            "nodeType": "InheritanceSpecifier",
+            "src": "89:9:163"
+          }
+        ],
+        "contractDependencies": [
+          2110,
+          10872
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10450,
+        "linearizedBaseContracts": [
+          10450,
+          10872,
+          2110
+        ],
+        "name": "SecondaryMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 10448,
+              "nodeType": "Block",
+              "src": "156:64:163",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 10449,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 10446,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 10445,
+                  "name": "onlyPrimary",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 10838,
+                  "src": "144:11:163",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "144:11:163"
+              }
+            ],
+            "name": "onlyPrimaryMock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10444,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "129:2:163"
+            },
+            "returnParameters": {
+              "id": 10447,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "156:0:163"
+            },
+            "scope": 10450,
+            "src": "105:115:163",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 10451,
+        "src": "63:159:163"
+      }
+    ],
+    "src": "0:223:163"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/SecondaryMock.sol",
+      "exportedSymbols": {
+        "SecondaryMock": [
+          10450
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 10440,
+        "name": "PragmaDirective",
+        "src": "0:23:163"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 10873,
+          "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/ownership/Secondary.sol",
+          "file": "../ownership/Secondary.sol",
+          "scope": 10451,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 10441,
+        "name": "ImportDirective",
+        "src": "25:36:163"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            2110,
+            10872
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            10450,
+            10872,
+            2110
+          ],
+          "name": "SecondaryMock",
+          "scope": 10451
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Secondary",
+                  "referencedDeclaration": 10872,
+                  "type": "contract Secondary"
+                },
+                "id": 10442,
+                "name": "UserDefinedTypeName",
+                "src": "89:9:163"
+              }
+            ],
+            "id": 10443,
+            "name": "InheritanceSpecifier",
+            "src": "89:9:163"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "onlyPrimaryMock",
+              "scope": 10450,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10444,
+                "name": "ParameterList",
+                "src": "129:2:163"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10447,
+                "name": "ParameterList",
+                "src": "156:0:163"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 10838,
+                      "type": "modifier ()",
+                      "value": "onlyPrimary"
+                    },
+                    "id": 10445,
+                    "name": "Identifier",
+                    "src": "144:11:163"
+                  }
+                ],
+                "id": 10446,
+                "name": "ModifierInvocation",
+                "src": "144:11:163"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 10448,
+                "name": "Block",
+                "src": "156:64:163"
+              }
+            ],
+            "id": 10449,
+            "name": "FunctionDefinition",
+            "src": "105:115:163"
+          }
+        ],
+        "id": 10450,
+        "name": "ContractDefinition",
+        "src": "63:159:163"
+      }
+    ],
+    "id": 10451,
+    "name": "SourceUnit",
+    "src": "0:223:163"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-06T18:13:26.183Z",
+  "devdoc": {
+    "methods": {
+      "primary()": {
+        "return": "the address of the primary."
+      },
+      "transferPrimary(address)": {
+        "details": "Transfers contract to a new primary.",
+        "params": {
+          "recipient": "The address of new primary."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

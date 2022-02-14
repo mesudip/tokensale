@@ -1,0 +1,276 @@
+{
+  "contractName": "OwnableMock",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/OwnableMock.sol\":\"OwnableMock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/solidity-contracts/openzeppelin-contracts-v2.5/GSN/Context.sol\":{\"keccak256\":\"0x90a3995645af7562d84b9d69363ffa5ae7217714ab61e951bf7bc450f40e4061\",\"urls\":[\"bzz-raw://216ef9d6b614db4eb46970b4e84903f2534a45572dd30a79f0041f1a5830f436\",\"dweb:/ipfs/QmNPrJ4MWKUAWzKXpUqeyKRUfosaoANZAqXgvepdrCwZAG\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/OwnableMock.sol\":{\"keccak256\":\"0x3105fc7b0360fa0c1c71a6afe5f50bd006cb0677d523a29def7afdbe967edffd\",\"urls\":[\"bzz-raw://515e859093a3384450f2fa1982c34a1d00b2813f37c5704892776b41932532a7\",\"dweb:/ipfs/Qmbt6Y6hwtFTMQyS42feYUYmnNXqDT1EtdAUqNfmW2KTv9\"]},\"project:/solidity-contracts/openzeppelin-contracts-v2.5/ownership/Ownable.sol\":{\"keccak256\":\"0xedc17a50e72bf16508ee1627ec0be88e6b924d94c2a12b70e3e4534110df899d\",\"urls\":[\"bzz-raw://9c93ca57d304b4425055f310e77813d859ab8e241cf46233a2c352335728cf82\",\"dweb:/ipfs/QmUww2PGToQZAfZjjdvp9eBV98UApPM49c4esowcnVBPpH\"]}},\"version\":1}",
+  "bytecode": "0x60806040819052600080546001600160a01b031916329081178255918291907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a3506102fb806100536000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063715018a6146100515780638da5cb5b1461005b5780638f32d59b1461007f578063f2fde38b1461009b575b600080fd5b6100596100c1565b005b610063610164565b604080516001600160a01b039092168252519081900360200190f35b610087610173565b604080519115158252519081900360200190f35b610059600480360360208110156100b157600080fd5b50356001600160a01b0316610197565b6100c9610173565b61011a576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b600080546001600160a01b03166101886101fc565b6001600160a01b031614905090565b61019f610173565b6101f0576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b6101f981610200565b50565b3390565b6001600160a01b0381166102455760405162461bcd60e51b81526004018080602001828103825260268152602001806102a16026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a723158206224786610a4c968d09761fe4fc6f46749a6a2e4da3a22fc4d8c15cf05765f4964736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063715018a6146100515780638da5cb5b1461005b5780638f32d59b1461007f578063f2fde38b1461009b575b600080fd5b6100596100c1565b005b610063610164565b604080516001600160a01b039092168252519081900360200190f35b610087610173565b604080519115158252519081900360200190f35b610059600480360360208110156100b157600080fd5b50356001600160a01b0316610197565b6100c9610173565b61011a576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b600080546001600160a01b03166101886101fc565b6001600160a01b031614905090565b61019f610173565b6101f0576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b6101f981610200565b50565b3390565b6001600160a01b0381166102455760405162461bcd60e51b81526004018080602001828103825260268152602001806102a16026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a723158206224786610a4c968d09761fe4fc6f46749a6a2e4da3a22fc4d8c15cf05765f4964736f6c63430005110032",
+  "sourceMap": "61:88:149:-;;;;;698:17:171;737:18;;-1:-1:-1;;;;;;737:18:171;718:9;737:18;;;;;718:9;;;698:17;770:43;;698:17;;770:43;664:156;61:88:149;;;;;;",
+  "deployedSourceMap": "61:88:149:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:88:149;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1681:137:171;;;:::i;:::-;;896:77;;;:::i;:::-;;;;-1:-1:-1;;;;;896:77:171;;;;;;;;;;;;;;1247:92;;;:::i;:::-;;;;;;;;;;;;;;;;;;1967:107;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1967:107:171;-1:-1:-1;;;;;1967:107:171;;:::i;1681:137::-;1100:9;:7;:9::i;:::-;1092:54;;;;;-1:-1:-1;;;1092:54:171;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1779:1;1763:6;;1742:40;;-1:-1:-1;;;;;1763:6:171;;;;1742:40;;1779:1;;1742:40;1809:1;1792:19;;-1:-1:-1;;;;;;1792:19:171;;;1681:137::o;896:77::-;934:7;960:6;-1:-1:-1;;;;;960:6:171;896:77;:::o;1247:92::-;1287:4;1326:6;;-1:-1:-1;;;;;1326:6:171;1310:12;:10;:12::i;:::-;-1:-1:-1;;;;;1310:22:171;;1303:29;;1247:92;:::o;1967:107::-;1100:9;:7;:9::i;:::-;1092:54;;;;;-1:-1:-1;;;1092:54:171;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2039:28;2058:8;2039:18;:28::i;:::-;1967:107;:::o;788:96:57:-;867:10;788:96;:::o;2175:225:171:-;-1:-1:-1;;;;;2248:22:171;;2240:73;;;;-1:-1:-1;;;2240:73:171;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2349:6;;;2328:38;;-1:-1:-1;;;;;2328:38:171;;;;2349:6;;;2328:38;;;2376:6;:17;;-1:-1:-1;;;;;;2376:17:171;-1:-1:-1;;;;;2376:17:171;;;;;;;;;;2175:225::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../ownership/Ownable.sol\";\n\ncontract OwnableMock is Ownable {\n    // solhint-disable-previous-line no-empty-blocks\n}\n",
+  "sourcePath": "/Users/sudipbhattarai/Documents/erc20-tokensale-gen/solidity-contracts/openzeppelin-contracts-v2.5/mocks/OwnableMock.sol",
+  "ast": {
+    "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/OwnableMock.sol",
+    "exportedSymbols": {
+      "OwnableMock": [
+        9510
+      ]
+    },
+    "id": 9511,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9506,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:149"
+      },
+      {
+        "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/ownership/Ownable.sol",
+        "file": "../ownership/Ownable.sol",
+        "id": 9507,
+        "nodeType": "ImportDirective",
+        "scope": 9511,
+        "sourceUnit": 10799,
+        "src": "25:34:149",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 9508,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 10798,
+              "src": "85:7:149",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$10798",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 9509,
+            "nodeType": "InheritanceSpecifier",
+            "src": "85:7:149"
+          }
+        ],
+        "contractDependencies": [
+          2110,
+          10798
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 9510,
+        "linearizedBaseContracts": [
+          9510,
+          10798,
+          2110
+        ],
+        "name": "OwnableMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 9511,
+        "src": "61:88:149"
+      }
+    ],
+    "src": "0:150:149"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/mocks/OwnableMock.sol",
+      "exportedSymbols": {
+        "OwnableMock": [
+          9510
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 9506,
+        "name": "PragmaDirective",
+        "src": "0:23:149"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 10799,
+          "absolutePath": "project:/solidity-contracts/openzeppelin-contracts-v2.5/ownership/Ownable.sol",
+          "file": "../ownership/Ownable.sol",
+          "scope": 9511,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 9507,
+        "name": "ImportDirective",
+        "src": "25:34:149"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            2110,
+            10798
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            9510,
+            10798,
+            2110
+          ],
+          "name": "OwnableMock",
+          "nodes": [
+            null
+          ],
+          "scope": 9511
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 10798,
+                  "type": "contract Ownable"
+                },
+                "id": 9508,
+                "name": "UserDefinedTypeName",
+                "src": "85:7:149"
+              }
+            ],
+            "id": 9509,
+            "name": "InheritanceSpecifier",
+            "src": "85:7:149"
+          }
+        ],
+        "id": 9510,
+        "name": "ContractDefinition",
+        "src": "61:88:149"
+      }
+    ],
+    "id": 9511,
+    "name": "SourceUnit",
+    "src": "0:150:149"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-06T18:13:26.167Z",
+  "devdoc": {
+    "methods": {
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
